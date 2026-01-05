@@ -17,11 +17,11 @@ function App() {
       <main>
         <Hero />
         <Problem />
-        <Pricing />
         <FAQ />
         <About />
         <Testimonials />
         <Process />
+        <Pricing />
       </main>
 
       <Footer />
