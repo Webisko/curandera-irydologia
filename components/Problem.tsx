@@ -30,17 +30,17 @@ export const Problem: React.FC = () => {
       <div className="max-w-5xl mx-auto">
         
         {/* Intro Questions */}
-        <div className="mb-16 text-center">
-          <h2 className="font-serif text-3xl md:text-4xl text-curandera-dark mb-8">Czy to brzmi znajomo?</h2>
-          <div className="grid md:grid-cols-2 gap-6 text-left">
+        <div className="mb-12 text-center">
+          <h2 className="font-serif text-3xl md:text-4xl text-curandera-dark mb-6">Czy to brzmi znajomo?</h2>
+          <div className="grid md:grid-cols-3 gap-4 text-left">
             {problems.map((prob, idx) => (
-              <div key={idx} className="flex items-start bg-curandera-bg p-6 rounded-none">
-                <span className="text-curandera-accent text-xl mr-4 font-serif italic">?</span>
-                <p className="font-sans text-curandera-dark/80">{prob}</p>
+              <div key={idx} className="flex items-start bg-curandera-bg p-4 rounded-none">
+                <span className="text-curandera-accent text-lg mr-3 font-serif italic">?</span>
+                <p className="font-sans text-sm text-curandera-dark/80 leading-snug">{prob}</p>
               </div>
             ))}
           </div>
-          <p className="mt-12 text-lg font-serif italic text-curandera-dark">
+          <p className="mt-8 text-base font-serif italic text-curandera-dark">
             Irydologia pomaga zrozumieć predyspozycje organizmu, zanim pojawią się poważne sygnały.
           </p>
         </div>

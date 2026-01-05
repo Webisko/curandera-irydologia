@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react';
 export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
     return {
-      base: '/curandera-irydologia/',
+      base: mode === 'production' ? '/curandera-irydologia/' : '/',
       server: {
         port: 3001,
         host: '0.0.0.0',
