@@ -76,7 +76,7 @@ export const FAQ: React.FC = () => {
         
         <div className="space-y-4">
           {faqData.map((item, index) => (
-            <div key={index} className="bg-white rounded-2xl overflow-hidden shadow-sm border border-stone-100">
+            <div key={index} className="bg-white rounded-none overflow-hidden shadow-sm border border-stone-100">
               <button
                 className="w-full px-6 py-5 text-left flex justify-between items-start focus:outline-none group"
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
