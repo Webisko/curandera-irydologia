@@ -12,17 +12,17 @@ export const Process: React.FC = () => {
     {
       icon: <Mail size={32} />,
       title: "2. Instrukcja",
-      desc: "Otrzymasz maila z PDF zawierającym instrukcję wykonania poprawnych zdjęć tęczówki."
+      desc: "Po dokonaniu zakupu otrzymasz maila z instrukcją wykonania zdjęcia tęczówki oka."
     },
     {
       icon: <Camera size={32} />,
       title: "3. Wysyłka zdjęć",
-      desc: "Wyślij zdjęcia oraz opis dolegliwości na kontakt@curandera.pl."
+      desc: "Wyślij zdjęcia na adres e-mail kontakt@curandera.pl, podpisz się imieniem i nazwiskiem. W pakiecie II napisz 2-3 zdania o dolegliwościach i listę leków."
     },
     {
       icon: <FileText size={32} />,
       title: "4. Analiza",
-      desc: "Otrzymasz gotową analizę w ciągu 5–10 dni roboczych."
+      desc: "Otrzymasz gotową analizę mailowo w ciągu 5–10 dni roboczych."
     }
   ];
 

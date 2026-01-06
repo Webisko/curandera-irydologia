@@ -32,18 +32,22 @@ const faqData: FaqItem[] = [
   },
   {
     question: "Jak działa irydologia i czy jest wiarygodną metodą diagnostyczną?",
-    answer: "Ludzki organizm jest systemem naczyń połączonych – wszystkie narządy ściśle współpracują ze sobą. Tęczówka oka jest połączona ze wszystkimi narządami i systemami ciała poprzez układ nerwowy i krwionośny. Dzięki temu uwidaczniają się na niej wszelkie zmiany i zaburzenia w funkcjonowaniu ciała. Kiedy pojawi się jakaś nieprawidłowość w ciele, układ przywspółczulny wysyła na tęczówkę informację o tym. Możemy to obserwować pod postacią różnych znaków irydologicznych: zatok, krypt, zmian barwnikowych, pierścieni, linii, czy nieprawidłowości w kształcie i wielkości różnych struktur np. kryzy czy źrenicy. Znaki pojawiające się na tęczówce pozwalają określić kondycję fizyczną, emocjonalną i psychiczną człowieka, a także jego predyspozycje do schorzeń, co pozwala na wprowadzenie szybkiej profilaktyki, zanim choroba zacznie się rozwijać. Irydodiagnostyka jako metoda daje bardzo wysoką skuteczność, jednak trzeba dużo zależy od umiejętności irydologa."
+    answer: "Ludzki organizm jest systemem naczyń połączonych – wszystkie narządy ściśle współpracują ze sobą. Tęczówka oka jest połączona ze wszystkimi narządami i systemami ciała poprzez układ nerwowy i krwionośny. Dzięki temu uwidaczniają się na niej wszelkie zmiany i zaburzenia w funkcjonowaniu ciała. Kiedy pojawi się jakaś nieprawidłowość w ciele, układ przywspółczulny wysyła na tęczówkę informację o tym. Możemy to obserwować pod postacią różnych znaków irydologicznych: zatok, krypt, zmian barwnikowych, pierścieni, linii, czy nieprawidłowości w kształcie i wielkości różnych struktur np. kryzy czy źrenicy. Znaki pojawiające się na tęczówce pozwalają określić kondycję fizyczną, emocjonalną i psychiczną człowieka, a także jego predyspozycje do schorzeń, co pozwala na wprowadzenie szybkiej profilaktyki, zanim choroba zacznie się rozwijać. Irydodiagnostyka jako metoda daje bardzo wysoką skuteczność, jednak trzeba wiedzieć, że dużo zależy od umiejętności irydologa."
   },
   {
     question: "Czego możemy dowiedzieć się o swoim ciele za pomocą irydodiagnostyki?",
     answer: (
-      <ul className="list-disc pl-5 space-y-1">
-        <li>Konstytucja i typ ciała</li>
-        <li>Stan systemu nerwowego i poziom stresu</li>
-        <li>Kondycja poszczególnych narządów i systemów ciała</li>
-        <li>Predyspozycje do schorzeń i obciążenia genetyczne</li>
-        <li>Lokalizacja obszarów w ciele obciążonych toksynami</li>
-      </ul>
+      <>
+        <p className="mb-3">Irydodiagnostyka pomaga określić m.in.:</p>
+        <ul className="list-disc pl-5 space-y-1">
+          <li>Konstytucję i typ ciała</li>
+          <li>Stan systemu nerwowego, kondycję psychiczną i poziom stresu</li>
+          <li>Kondycję poszczególnych narządów i systemów ciała</li>
+          <li>Predyspozycje do schorzeń i obciążenia genetyczne</li>
+          <li>Lokalizację obszarów w ciele obciążonych toksynami</li>
+          <li>Poziom odporności organizmu</li>
+        </ul>
+      </>
     )
   },
   {

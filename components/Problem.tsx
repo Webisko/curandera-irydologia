@@ -5,11 +5,9 @@ import { Check, X } from 'lucide-react';
 export const Problem: React.FC = () => {
   const problems = [
     "Zmagasz się z dolegliwościami zdrowotnymi i nie umiesz dojść do przyczyny?",
-    "Wizyty u specjalistów nie przynoszą oczekiwanych rezultatów?",
-    "Twoje badania są „w normie”, ale mimo to nadal czujesz, że coś jest nie tak?",
+    "Twoje badania są \"w normie\", ale mimo to nadal czujesz, że coś jest nie tak?",
     "Chcesz zrozumieć jak działa Twoje ciało?",
-    "Potrzebujesz szybkiej diagnozy bez ingerencji w tkanki ciała?",
-    "Nie wiesz, od czego zacząć pracę z dietą, suplementacją czy stylem życia?"
+    "Potrzebujesz szybkiej diagnozy bez ingerencji w tkanki ciała?"
   ];
 
   const forYou = [
@@ -21,7 +19,7 @@ export const Problem: React.FC = () => {
 
   const notForYou = [
     "szukasz jednoznacznej diagnozy medycznej",
-    "oczekujesz „gotowego rozwiązania” dla swoich problemów zdrowotnych",
+    "oczekujesz \"gotowego rozwiązania\" dla swoich problemów zdrowotnych",
     "nie jesteś gotowa/-y na zmianę diety, stylu życia, nawyków"
   ];
 
