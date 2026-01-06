@@ -1,6 +1,7 @@
 export function asset(path: string): string {
   const clean = path.replace(/^\/+/, '');
-  return new URL(clean, import.meta.env.BASE_URL).toString();
+  const base = import.meta.env.BASE_URL || '/';
+  return base + clean;
 }
 
 // Usage examples:
