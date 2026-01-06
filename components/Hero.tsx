@@ -18,12 +18,8 @@ export const Hero: React.FC = () => {
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center space-y-8">
         <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl leading-tight text-curandera-dark mb-6">
           Analiza irydologiczna online <br/>
-          <span className="italic font-light text-3xl md:text-5xl block mt-4">Odkryj, co Twoja tęczówka mówi o stanie organizmu</span>
+          <span className="italic font-light text-3xl md:text-5xl block mt-4">Odkryj, co Twoja tęczówka mówi o stanie organizmu i zadbaj o siebie świadomie</span>
         </h1>
-        
-        <p className="font-sans text-lg md:text-xl text-curandera-dark/80 max-w-2xl mx-auto leading-relaxed">
-          Dowiedz się, jakie są Twoje predyspozycje zdrowotne i zadbaj o siebie świadomie.
-        </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
           <a href="#oferta">
