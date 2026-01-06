@@ -30,7 +30,7 @@ export const Problem: React.FC = () => {
         {/* Intro Questions */}
         <div className="mb-12 text-center">
           <h2 className="font-serif text-3xl md:text-4xl text-curandera-dark mb-6">Czy to brzmi znajomo?</h2>
-          <div className="grid md:grid-cols-3 gap-4 text-left">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
             {problems.map((prob, idx) => (
               <div key={idx} className="flex items-start bg-curandera-bg p-4 rounded-none">
                 <span className="text-curandera-accent text-lg mr-3 font-serif italic">?</span>
