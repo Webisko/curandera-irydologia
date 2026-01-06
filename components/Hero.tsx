@@ -8,7 +8,7 @@ export const Hero: React.FC = () => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
-          src={asset('images/3.webp')} 
+          src={asset('images/hero_3.webp')} 
           alt="Zbliżenie na tęczówkę oka" 
           className="w-full h-full object-cover opacity-20"
         />
