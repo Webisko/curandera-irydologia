@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from './Button';
+import { asset } from '../utils/asset';
 
 export const Hero: React.FC = () => {
   return (
@@ -7,8 +8,8 @@ export const Hero: React.FC = () => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="https://images.unsplash.com/photo-1596502678663-7c70c2d28f7d?q=80&w=2070&auto=format&fit=crop" 
-          alt="Close up of a human eye iris" 
+          src={asset('images/3.webp')} 
+          alt="Zbliżenie na tęczówkę oka" 
           className="w-full h-full object-cover opacity-20"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-curandera-bg/0 via-curandera-bg/50 to-curandera-bg"></div>
