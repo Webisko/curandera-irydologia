@@ -29,7 +29,7 @@ export const Problem: React.FC = () => {
         
         {/* Intro Questions */}
         <div className="mb-12 text-center">
-          <h2 className="font-serif text-3xl md:text-4xl text-curandera-dark mb-6">Czy to brzmi znajomo?</h2>
+          <h2 className="font-serif text-3xl md:text-4xl text-curandera-dark mb-6">Kiedy irydologia online może Ci pomóc?</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
             {problems.map((prob, idx) => (
               <div key={idx} className="flex items-start bg-curandera-bg p-4 rounded-none">
@@ -39,7 +39,7 @@ export const Problem: React.FC = () => {
             ))}
           </div>
           <p className="mt-8 text-base font-serif italic text-curandera-dark">
-            Irydologia pomaga zrozumieć predyspozycje organizmu, zanim pojawią się poważne sygnały.
+            Analiza irydologiczna pomaga zrozumieć predyspozycje organizmu, zanim pojawią się poważne sygnały.
           </p>
         </div>
 
@@ -52,7 +52,7 @@ export const Problem: React.FC = () => {
               <span className="bg-curandera-green text-white rounded-full p-1 mr-3">
                 <Check size={16} />
               </span>
-              Irydologia jest dla Ciebie, jeśli:
+              Irydologia online jest dla Ciebie, jeśli:
             </h3>
             <ul className="space-y-4">
               {forYou.map((item, idx) => (
@@ -70,7 +70,7 @@ export const Problem: React.FC = () => {
               <span className="bg-red-800/70 text-white rounded-full p-1 mr-3">
                 <X size={16} />
               </span>
-              Nie jest dla Ciebie, jeśli:
+              Irydologia nie jest dla Ciebie, jeśli:
             </h3>
             <ul className="space-y-4">
               {notForYou.map((item, idx) => (
