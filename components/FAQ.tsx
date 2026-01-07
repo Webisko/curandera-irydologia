@@ -24,7 +24,7 @@ const faqData: FaqItem[] = [
   },
   {
       question: "Jakie są zalety irydologii? Korzyści analizy tęczówki online",
-      answer: "Jej dużą zaletą jest możliwość oceny stanu zdrowia pacjenta w sposób szybki i całkowicie bezbolesny (bez ingerencji w tkanki ciała, co ma miejsce w przypadku innych metod diagnostycznych). Wymaga jedynie dobrego oświetlenia tęczówki oka i wykonania zdjęcia, na podstawie którego irydolog przeprowadza analizę. Dodatkowo jest to metoda bardzo bezpieczna, a więc mogą z niej skorzystać zarówno dzieci, kobiety w ciąży, osoby z chorobami przewlekłymi, jak i osoby w wieku podeszłym. Nie wymaga również specjalnego przygotowania pacjenta. Bardzo dużą zaletą jest holistyczna ocena stanu zdrowia – pomaga spojrzeć na wszystkie organy i układy ciała jednocześnie. Dzięki tak szerokiemu spojrzeniu, możemy łatwiej zrozumieć swoje ciało i znacznie podnieść jakość swojego życia."
+      answer: "Jej dużą zaletą jest możliwość oceny stanu zdrowia pacjenta w sposób szybki i całkowicie bezbolesny (bez ingerencji w tkanki ciała, co ma miejsce w przypadku innych metod diagnostycznych). Wymaga jedynie dobrego oświetlenia tęczówki oka i wykonania zdjęcia, na podstawie którego irydolog przeprowadza analizę. Dodatkowo jest to metoda bardzo bezpieczna, a więc mogą z niej skorzystać zarówno dzieci, kobiety w ciąży, osoby z chorobami przewlekłymi, jak i osoby w wieku podeszłym. Irydologia online nie wymaga również specjalnego przygotowania pacjenta. Bardzo dużą zaletą jest holistyczna ocena stanu zdrowia – pomaga spojrzeć na wszystkie organy i układy ciała jednocześnie. Dzięki tak szerokiemu spojrzeniu, możemy łatwiej zrozumieć swoje ciało i znacznie podnieść jakość swojego życia."
   },
   {
     question: "Jakie ograniczenia ma irydologia?",
