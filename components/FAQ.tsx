@@ -8,19 +8,23 @@ const faqData: FaqItem[] = [
     question: "Czym jest irydologia?",
     answer: (
       <div className="space-y-4">
-        <p>Irydologia, zwana też irydodiagnostyką, jest to dziedzina medycyny alternatywnej (niekonwencjonalnej), zajmująca się analizą <strong>tęczówki oka</strong>. Na podstawie takiej analizy, irydolog jest w stanie odkryć problemy zdrowotne pacjenta i ocenić całościowy stan jego zdrowia. Można więc powiedzieć, że irydologia jest niekonwencjonalną metodą diagnostyczną, polegającą na obserwacji <strong>tęczówki oka</strong>, w której zapisane są informacje o:</p>
+        <p>Irydologia, zwana też irydodiagnostyką, jest to dziedzina medycyny alternatywnej (niekonwencjonalnej), zajmująca się analizą tęczówki oka. Na podstawie takiej analizy, irydolog jest w stanie odkryć problemy zdrowotne pacjenta i ocenić całościowy stan jego zdrowia. Można więc powiedzieć, że irydologia jest niekonwencjonalną metodą diagnostyczną, polegającą na obserwacji <strong>tęczówki oka</strong>, w której zapisane są informacje o:</p>
         <ul className="list-disc pl-5 space-y-1">
           <li>Konstytucji i typie organizmu</li>
           <li>Obciążeniach narządowych</li>
           <li>Tendencjach do stanów zapalnych, osłabień lub napięć</li>
         </ul>
-        <p>Nie jest to metoda diagnostyczna w sensie medycznym, lecz narzędzie wspierające holistyczne spojrzenie na organizm. Irydologia pomaga wyznaczyć priorytety w profilaktyce zdrowotnej i określa kierunek działań na ścieżce do pełnego zdrowia. Oczy są mapą ciała – irydolog pomaga ją odczytać.</p>
+        <p>Nie jest to metoda diagnostyczna w sensie medycznym, lecz <strong>narzędzie wspierające holistyczne spojrzenie na organizm</strong>. Irydologia pomaga wyznaczyć priorytety w profilaktyce zdrowotnej i określa kierunek działań na ścieżce do pełnego zdrowia. Oczy są mapą ciała – irydolog pomaga ją odczytać.</p>
       </div>
     )
   },
   {
     question: "Do czego służy irydologia? Praktyczne zastosowania irydodiagnostyki",
-    answer: "Irydodiagnostyka czyli analiza tęczówki oka może stanowić uzupełnienie standardowej diagnostyki medycznej. Często analiza irydologiczna pokazuje chorobę (słabość narządu/jakaś zmiana/niepokojący znak) na bardzo wczesnych etapach rozwoju (zanim pojawią się objawy), dzięki czemu można zareagować bardzo szybko i wprowadzić odpowiednie działania profilaktyczne, zanim choroba się rozwinie. Niestety diagnostyka medyczna ma pewne wady i zdarza się, że choroby wykrywane są zbyt późno. Współpraca medycyny konwencjonalnej z irydologią pozwoliłaby wypełnić tę lukę i pomóc wykrywać choroby szybciej i całkowicie bezboleśnie. Coraz więcej specjalistów medycyny konwencjonalnej interesuje się irydologią, ze względu na jej wysoki poziom skuteczności. Irydologia może być również wykorzystywana w psychologii (określa m.in. stopień radzenia sobie ze stresem, skłonność do pewnych reakcji układu nerwowego np. skłonność do nerwic czy depresji, a nawet jest w stanie wskazać na pewne cechy osobowości np. temperament)."
+    answer: (
+      <p>
+        Irydodiagnostyka czyli analiza tęczówki oka może stanowić <strong>uzupełnienie</strong> standardowej diagnostyki medycznej. Często analiza irydologiczna pokazuje chorobę (słabość narządu/jakaś zmiana/niepokojący znak) na bardzo wczesnych etapach rozwoju (zanim pojawią się objawy), dzięki czemu można zareagować bardzo szybko i wprowadzić odpowiednie działania profilaktyczne, zanim choroba się rozwinie. Niestety diagnostyka medyczna ma pewne wady i zdarza się, że choroby wykrywane są zbyt późno. Współpraca medycyny konwencjonalnej z irydologią pozwoliłaby wypełnić tę lukę i pomóc wykrywać choroby szybciej i całkowicie bezboleśnie. Coraz więcej specjalistów medycyny konwencjonalnej interesuje się irydologią, ze względu na jej wysoki poziom skuteczności. Irydologia może być również wykorzystywana w psychologii (określa m.in. stopień radzenia sobie ze stresem, skłonność do pewnych reakcji układu nerwowego np. skłonność do nerwic czy depresji, a nawet jest w stanie wskazać na pewne cechy osobowości np. temperament).
+      </p>
+    )
   },
   {
       question: "Jakie są zalety irydologii? Korzyści analizy tęczówki online",
@@ -32,13 +36,17 @@ const faqData: FaqItem[] = [
   },
   {
     question: "Jak działa irydologia i czy jest wiarygodną metodą diagnostyczną?",
-    answer: "Ludzki organizm jest systemem naczyń połączonych – wszystkie narządy ściśle współpracują ze sobą. Tęczówka oka jest połączona ze wszystkimi narządami i systemami ciała poprzez układ nerwowy i krwionośny. Dzięki temu uwidaczniają się na niej wszelkie zmiany i zaburzenia w funkcjonowaniu ciała. Kiedy pojawi się jakaś nieprawidłowość w ciele, układ przywspółczulny wysyła na tęczówkę informację o tym. Możemy to obserwować pod postacią różnych znaków irydologicznych: zatok, krypt, zmian barwnikowych, pierścieni, linii, czy nieprawidłowości w kształcie i wielkości różnych struktur np. kryzy czy źrenicy. Znaki pojawiające się na tęczówce pozwalają określić kondycję fizyczną, emocjonalną i psychiczną człowieka, a także jego predyspozycje do schorzeń, co pozwala na wprowadzenie szybkiej profilaktyki, zanim choroba zacznie się rozwijać. Irydodiagnostyka jako metoda daje bardzo wysoką skuteczność, jednak trzeba wiedzieć, że dużo zależy od umiejętności irydologa."
+    answer: (
+      <p>
+        Ludzki organizm jest systemem naczyń połączonych – wszystkie narządy ściśle współpracują ze sobą. Tęczówka oka jest połączona ze wszystkimi narządami i systemami ciała poprzez <strong>układ nerwowy i krwionośny</strong>. Dzięki temu uwidaczniają się na niej wszelkie zmiany i zaburzenia w funkcjonowaniu ciała. Kiedy pojawi się jakaś nieprawidłowość w ciele, układ przywspółczulny wysyła na tęczówkę informację o tym. Możemy to obserwować pod postacią różnych znaków irydologicznych: zatok, krypt, zmian barwnikowych, pierścieni, linii, czy nieprawidłowości w kształcie i wielkości różnych struktur np. kryzy czy źrenicy. Znaki pojawiające się na tęczówce pozwalają określić kondycję fizyczną, emocjonalną i psychiczną człowieka, a także jego predyspozycje do schorzeń, co pozwala na wprowadzenie szybkiej profilaktyki, zanim choroba zacznie się rozwijać. Irydodiagnostyka jako metoda daje bardzo wysoką skuteczność, jednak trzeba wiedzieć, że dużo zależy od umiejętności irydologa.
+      </p>
+    )
   },
   {
-    question: "Czego możemy dowiedzieć się o swoim ciele za pomocą irydodiagnostyki?",
+    question: "Czego możemy dowiedzieć się o swoim ciele za pomocą analizy tęczówki online?",
     answer: (
       <>
-        <p className="mb-3">Irydodiagnostyka pomaga określić m.in.:</p>
+        <p className="mb-3">Irydodiagnostyka (analiza tęczówki oka) pomaga określić m.in.:</p>
         <ul className="list-disc pl-5 space-y-1">
           <li>Konstytucję i typ ciała</li>
           <li>Stan systemu nerwowego, kondycję psychiczną i poziom stresu</li>
@@ -51,11 +59,11 @@ const faqData: FaqItem[] = [
     )
   },
   {
-    question: "Czy dzieci i zwierzęta również mogą otrzymać analizę irydologiczną?",
+    question: "Czy dzieci i zwierzęta również mogą otrzymać analizę irydologiczną online?",
     answer: "Nie wykonuję analizy irydologicznej dla zwierząt. Jeśli chodzi o dzieci - jest to możliwe, jednak należy wiedzieć, że tęczówka oka rozwija się do 3 roku życia. Po 3 roku życia, tęczówka oka osiąga już swój finalny kolor i wtedy możliwe jest wykonanie analizy. Jednak z uwagi na trudności w wykonaniu zdjęcia oka dziecku w nieruchomej pozycji, zalecam aby zgłaszać do analizy dzieci starsze."
   },
   {
-    question: "Czy są przeciwwskazania do wykonania analizy irydologicznej?",
+    question: "Czy są przeciwwskazania do wykonania analizy irydologicznej online?",
     answer: (
       <ul className="list-disc pl-5 space-y-1">
         <li>Wiek poniżej 4 roku życia (słabo wykształcona struktura tęczówki oraz niemożliwość wykonania zdjęcia w nieruchomej pozycji dziecku)</li>
