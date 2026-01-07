@@ -11,13 +11,11 @@ const packages: Package[] = [
     price: '199 zł',
     shortDescription: 'Podstawowa, kompleksowa analiza tęczówki oka, pozwalająca lepiej zrozumieć kondycję organizmu oraz jego indywidualne predyspozycje.',
     features: [
-      'Profesjonalna analiza irydologiczna na podstawie zdjęcia',
-      'Ocena możliwych słabości narządów i układów',
-      'Ocena stanu psychicznego',
-      'Ocena predyspozycji organizmu',
-      'Omówienie w formie nagrania wideo (20–30 minut)',
+      'Profesjonalna analiza irydologiczna online na podstawie przesłanego zdjęcia',
+      'Ocena możliwych słabości narządów i układów ciała',
+      'Omówienie w formie nagrania wideo (20-30 min)',
       'Plik tekstowy PDF z podsumowaniem analizy',
-      '1 konsultacja mailowa'
+      '1 konsultacja mailowa w przypadku dodatkowych pytań'
     ],
     detailsTitle: 'Długi opis Pakietu I',
     detailsContent: `W ramach Pakietu I otrzymasz szczegółowy wgląd w stan swojego organizmu z perspektywy irydologii. Analiza ta nie jest diagnozą medyczną, lecz holistyczną oceną Twojej konstytucji. 
@@ -30,10 +28,10 @@ const packages: Package[] = [
     price: '299 zł',
     shortDescription: 'Rozszerzona analiza irydologiczna z indywidualnymi zaleceniami i naturalną suplementacją dopasowaną do Twoich potrzeb.',
     features: [
-      'Pełna analiza irydologiczna jak w Pakiecie I',
+      'Pełna analiza irydologiczna online jak w Pakiecie I',
       'Indywidualny plan naturalnej suplementacji (PDF)',
-      'Indywidualne zalecenia dotyczące obszarów wymagających szczególnej troski (PDF)',
-      '2 konsultacje mailowe',
+      'Indywidualne zalecenia dotyczące wsparcia zdrowia poszczególnych narządów ciała (PDF)',
+      '2 konsultacje mailowe w przypadku dodatkowych pytań',
       'Wsparcie w doborze ziół i ekstraktów'
     ],
     detailsTitle: 'Długi opis Pakietu II',

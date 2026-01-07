@@ -1,31 +1,32 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Section } from './Section';
-import { Star, ChevronDown, ChevronUp } from 'lucide-react';
+import { Star } from 'lucide-react';
 import { Testimonial } from '../types';
 
 const testimonials: Testimonial[] = [
   {
     name: "Katarzyna Podmokła",
     rating: 5,
-    text: "Bardzo polecam analizę irydologiczną u Olgi. Nie spodziewałam się aż tak dokładnego opisu mojego stanu zdrowia, który się kompletnie pokrywa ze stanem faktycznym, choć pewne rewelacje muszę sprawdzić, bo o nich po prostu nie wiedziałam, co jest cudowne, bo zostałam nakierowana na aspekty dosyć istotne, na co nawet nie zwróciłam uwagi. Dzięki temu mogę zawczasu zadbać o profilaktykę, i mam nadzieję uniknąć chorób przewlekłych w przyszłości. Także nic tylko dziękować. Poza tym analiza opisana w prosty i czytelny sposób, poza krótszą formą pisemną obszerne wytłumaczenie w formie wideo, prosto, fajnie i przejrzyście."
+    text: `Bardzo polecam analizę irydologiczną u Olgi. Nie spodziewałam się aż tak dokładnego opisu mojego stanu zdrowia, który się kompletnie pokrywa ze stanem faktycznym, choć pewne rewelacje muszę sprawdzić, bo o nich po prostu nie wiedziałam, co jest cudowne, bo zostałam nakierowana na aspekty dosyć istotne, na co nawet nie zwróciłam uwagi. Dzięki temu mogę zawczasu zadbać o profilaktykę, i mam nadzieję uniknąć chorób przewlekłych w przyszłości. Także nic tylko dziękować 🥰❤️ Poza tym analiza opisana w prosty i czytelny sposób, poza krótszą formą pisemną obszerne wytłumaczenie w formie wideo, prosto, fajnie i przejrzyście 🥲`
   },
   {
     name: "Zuzanna Bergander",
     rating: 5,
-    text: "Z analizy jestem bardzo zadowolona i z treści i z formy. Bardzo dużo rzeczy się pokrywa z moim stanem realnym. Są też rzeczy o których nie wiedziałam a dzięki analizie mogę teraz na nie zwrócić uwagę. Szczerze nie spodziewałam się, że tak wiele można “wyczytać” z naszych oczu. Myślę, że taka analiza to bardzo przydatne narzędzie dla ludzi którzy chcą świadomie dążyć do lepszego zdrowia. Dzięki niej wiadomo na czym się trzeba skupić. Dziękuję raz jeszcze za poświęcony czas."
+    text: `Z analizy jestem bardzo zadowolona i z treści, i z formy. Bardzo dużo rzeczy się pokrywa z moim stanem realnym. Są też rzeczy, o których nie wiedziałam, a dzięki analizie mogę teraz na nie zwrócić uwagę 🙏🏻 Szczerze nie spodziewałam się, że tak wiele można „wyczytać” z naszych oczu. Myślę, że taka analiza to bardzo przydatne narzędzie dla ludzi, którzy chcą świadomie dążyć do lepszego zdrowia. Dzięki niej wiadomo, na czym się trzeba skupić. Dziękuję raz jeszcze za poświęcony czas 🙏🏻.`
   },
   {
     name: "Katarzyna Rink",
     rating: 5,
-    text: "Wow Olga, mega ciekawa ta analiza. Trzymasz super strukturę jak opowiadasz i wszystko świetnie wyjaśniasz. Super, że przesłałaś to w formie wideo. Bardzo się u mnie zgadza analiza z moją historią zdrowotną. Tak jakbyś o tym wiedziała. Zmotywowałaś mnie do dbania o siebie i do odprowadzenia limfy z głowy! Dzięki wielkie."
+    text: `Wow Olga, mega ciekawa ta analiza. Trzymasz super strukturę, jak opowiadasz i wszystko świetnie wyjaśniasz ❤️  Super, że przesłałaś to w formie wideo. Bardzo się u mnie zgadza analiza z moją historią zdrowotną. Tak jakbyś o tym wiedziała. Zmotywowałaś mnie do dbania o siebie i do odprowadzenia limfy z głowy! Dzięki wielkie ❤️`
+  },
+  {
+    name: "Ewelina Szwejda",
+    rating: 5,
+    text: `Badanie irydologiczne zaproponowane przez Olgę było dla mnie czymś zupełnie nowym. Nigdy wcześniej nie przyszło mi do głowy, że poprzez oczy można zobaczyć, jak funkcjonuje cały organizm. Już samo to było dla mnie bardzo ciekawe i otwierające. Podczas badania zrobiłyśmy zdjęcie oka, a następnie wspólnie je obserwowałyśmy. Olga niezwykle dokładnie i jasno wszystko mi wytłumaczyła – każdą zmianę, każdy znak w oku, pokazując, z czym w organizmie jest on powiązany. Jej sposób tłumaczenia był bardzo zrozumiały, spokojny i pełen uważności. To doświadczenie zainspirowało mnie do głębszego wglądu w swoje ciało oraz do większej troski o jego oczyszczanie i regenerację. Samo badanie ma prostą formę – wykonanie zdjęcia – jednak to, co dzieje się później, jest bardzo wartościowe. Olga przygotowała dla mnie szczegółowy opis, a także poleciła zioła, które mogę pić, aby wspierać oczyszczanie organizmu. Dodatkowo książka, którą pożyczyła mi do przeczytania, pokazała mi, jak mogę dalej o siebie dbać po takim badaniu i jak świadomie kontynuować ten proces. Z pełnym przekonaniem mogę powiedzieć, że było to dla mnie cenne doświadczenie, które dało mi nowe spojrzenie na moje ciało i zdrowie. Dziękuję ❤️🍀`
   }
 ];
 
 export const Testimonials: React.FC = () => {
-  const [showAll, setShowAll] = useState(false);
-  const visibleTestimonials = showAll ? testimonials : testimonials.slice(0, 6);
-  const hasMore = testimonials.length > 6;
-
   return (
     <Section id="opinie" bg="white">
       <div className="text-center mb-12">
@@ -33,31 +34,21 @@ export const Testimonials: React.FC = () => {
         <div className="w-16 h-px bg-curandera-dark/20 mx-auto mt-4"></div>
       </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {visibleTestimonials.map((t, idx) => (
-          <div key={idx} className="bg-curandera-bg p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex flex-col h-full">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {testimonials.map((t, idx) => (
+          <div key={idx} className="bg-curandera-bg p-8 rounded-none shadow-sm hover:shadow-md transition-shadow">
             <div className="flex space-x-1 text-curandera-accent mb-4">
-              {[...Array(t.rating)].map((_, i) => <Star key={i} size={16} fill="currentColor" />)}
+              {Array.from({ length: t.rating }, (_, i) => (
+                <Star key={i} size={16} fill="currentColor" />
+              ))}
             </div>
-            <p className="font-serif italic text-lg text-curandera-dark mb-6 flex-grow">"{t.text}"</p>
-            <div className="font-sans text-sm font-semibold uppercase tracking-wider text-stone-500 mt-auto">
+            <p className="font-serif italic text-lg text-curandera-dark mb-6">&ldquo;{t.text}&rdquo;</p>
+            <div className="font-sans text-sm font-semibold uppercase tracking-wider text-stone-500">
               — {t.name}
             </div>
           </div>
         ))}
       </div>
-
-      {hasMore && (
-        <div className="text-center mt-12">
-          <button 
-            onClick={() => setShowAll(!showAll)}
-            className="inline-flex items-center text-curandera-dark hover:text-curandera-accent transition-colors font-medium uppercase tracking-widest text-sm"
-          >
-            {showAll ? 'Pokaż mniej' : 'Zobacz więcej opinii'}
-            {showAll ? <ChevronUp size={16} className="ml-2"/> : <ChevronDown size={16} className="ml-2"/>}
-          </button>
-        </div>
-      )}
     </Section>
   );
 };
