@@ -19,7 +19,7 @@ const faqData: FaqItem[] = [
     )
   },
   {
-    question: "Jakie zastosowanie ma irydologia?",
+    question: "Do czego służy irydologia? Praktyczne zastosowania irydodiagnostyki",
     answer: "Może stanowić uzupełnienie standardowej diagnostyki medycznej. Często analiza irydologiczna pokazuje chorobę (słabość narządu/jakaś zmiana/niepokojący znak) na bardzo wczesnych etapach rozwoju (zanim pojawią się objawy), dzięki czemu można zareagować bardzo szybko i wprowadzić odpowiednie działania profilaktyczne, zanim choroba rozwinie się. Niestety diagnostyka medyczna ma pewne wady i zdarza się, że choroby wykrywane są zbyt późno. Współpraca medycyny konwencjonalnej z irydologią pozwoliłaby wypełnić tę lukę i pomóc wykrywać choroby szybciej i całkowicie bezboleśnie. Coraz więcej specjalistów medycyny konwencjonalnej interesuje się irydologią, ze względu na jej wysoki poziom skuteczności. Irydologia może być również wykorzystywana w psychologii (określa m.in. stopień radzenia sobie ze stresem, skłonność do pewnych reakcji układu nerwowego np. skłonność do nerwic czy depresji, a nawet jest w stanie wskazać na pewne cechy osobowości np. temperament)."
   },
   {
