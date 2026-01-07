@@ -8,7 +8,7 @@ const faqData: FaqItem[] = [
     question: "Czym jest irydologia?",
     answer: (
       <div className="space-y-4">
-        <p>Irydologia, zwana też irydodiagnostyką, jest to dziedzina medycyny alternatywnej (niekonwencjonalnej), zajmująca się analizą tęczówki oka. Na podstawie takiej analizy, irydolog jest w stanie odkryć problemy zdrowotne pacjenta i ocenić całościowy stan jego zdrowia. Można więc powiedzieć, że irydologia jest niekonwencjonalną metodą diagnostyczną, polegającą na obserwacji tęczówki oka, w której zapisane są informacje o:</p>
+        <p>Irydologia, zwana też irydodiagnostyką, jest to dziedzina medycyny alternatywnej (niekonwencjonalnej), zajmująca się analizą <strong>tęczówki oka</strong>. Na podstawie takiej analizy, irydolog jest w stanie odkryć problemy zdrowotne pacjenta i ocenić całościowy stan jego zdrowia. Można więc powiedzieć, że irydologia jest niekonwencjonalną metodą diagnostyczną, polegającą na obserwacji <strong>tęczówki oka</strong>, w której zapisane są informacje o:</p>
         <ul className="list-disc pl-5 space-y-1">
           <li>Konstytucji i typie organizmu</li>
           <li>Obciążeniach narządowych</li>
