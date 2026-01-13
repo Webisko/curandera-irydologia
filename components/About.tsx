@@ -19,7 +19,7 @@ export const About: React.FC = () => {
         <div className="space-y-6">
           <span className="text-curandera-accent uppercase tracking-widest text-body-m font-medium">O mnie</span>
           <h2 className="font-serif text-h-l text-curandera-primary">Olga Michalik</h2>
-          <h3 className="text-h-m font-light italic text-stone-500">Certyfikowany irydolog, fitoterapeuta, właścicielka marki Curandera.</h3>
+          <h3 className="text-body-l font-light italic text-curandera-dark border-l-4 border-curandera-accent pl-4">Certyfikowany irydolog, fitoterapeuta, właścicielka marki Curandera.</h3>
           
           <div className="space-y-4 text-stone-700 font-sans leading-relaxed text-body-l">
             <p>
