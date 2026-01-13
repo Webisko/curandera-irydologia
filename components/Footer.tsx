@@ -15,7 +15,7 @@ export const Footer: React.FC = () => {
         <div className="w-full max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between text-stone-500 text-body-m font-sans">
           {/* Left: Logo */}
           <div className="flex items-center justify-center md:justify-start w-full md:w-auto mb-4 md:mb-0">
-            <img src="/images/CURANDERA logo z nazwą.webp" alt="CURANDERA" className="h-8 w-auto" />
+            <img src="/curandera-irydologia/images/CURANDERA logo z nazwą.webp" alt="CURANDERA" className="h-8 w-auto" />
           </div>
           {/* Center: Dynamic copyright */}
           <div className="flex-1 flex justify-center items-center text-center">

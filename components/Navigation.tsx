@@ -21,11 +21,11 @@ export const Navigation: React.FC = () => {
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 max-h-[80px] ${isScrolled ? 'bg-curandera-alt/95 backdrop-blur-sm shadow-sm py-2' : 'bg-curandera-alt py-4'}`}>
+    <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 max-h-[80px] ${isScrolled ? 'bg-curandera-alt/95 backdrop-blur-sm shadow-sm py-2' : 'bg-transparent py-4'}`}>
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         {/* Logo */}
         <a href="#" className="flex-shrink-0">
-          <img src="/images/CURANDERA logo z nazwą.webp" alt="CURANDERA" className="w-[320px] max-w-[75vw] h-auto" />
+          <img src="/curandera-irydologia/images/CURANDERA logo z nazwą.webp" alt="CURANDERA" className="w-[320px] max-w-[75vw] h-auto" />
         </a>
 
         {/* Desktop Menu */}
@@ -34,18 +34,26 @@ export const Navigation: React.FC = () => {
             <a 
               key={link.name} 
               href={link.href} 
-              className="text-body-l lowercase tracking-widest text-curandera-dark hover:text-curandera-accent transition-colors"
+              className={`text-body-l lowercase tracking-widest transition-colors ${
+                isScrolled ? 'text-curandera-dark hover:text-curandera-accent' : 'text-white hover:text-curandera-accent'
+              }`}
             >
               {link.name}
             </a>
           ))}
-          <a href="#oferta" className="px-5 py-2 bg-[#030303] text-white rounded-none text-body-l lowercase tracking-widest hover:bg-curandera-accent transition-colors">
+          <a href="#oferta" className={`px-5 py-2 rounded-none text-body-l lowercase tracking-widest transition-all ${
+            isScrolled 
+              ? 'bg-[#030303] text-white hover:bg-curandera-accent' 
+              : 'bg-white text-curandera-dark hover:bg-curandera-accent hover:text-white'
+          }`}>
             Wybierz Pakiet
           </a>
         </div>
 
         {/* Mobile Toggle */}
-        <button className="lg:hidden text-curandera-dark" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+        <button className={`lg:hidden transition-colors ${
+          isScrolled ? 'text-curandera-dark' : 'text-white'
+        }`} onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
           {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
