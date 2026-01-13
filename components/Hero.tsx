@@ -25,7 +25,7 @@ export const Hero: React.FC = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 pt-8">
             <a href="#oferta">
-              <Button>Kup analizę irydologiczną</Button>
+              <Button>kup analizę irydologiczną</Button>
             </a>
           </div>
         </div>
