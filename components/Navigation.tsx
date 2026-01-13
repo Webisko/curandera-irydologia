@@ -25,7 +25,7 @@ export const Navigation: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         {/* Logo */}
         <a href="#" className="flex-shrink-0">
-          <img src="/curandera-irydologia/images/CURANDERA logo z nazwą.webp" alt="CURANDERA" className="w-[320px] max-w-[75vw] h-auto" />
+          <img src="/curandera-irydologia/images/CURANDERA_logo.webp" alt="CURANDERA" className="w-[320px] max-w-[75vw] h-auto" />
         </a>
 
         {/* Desktop Menu */}
