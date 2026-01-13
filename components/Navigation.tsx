@@ -26,7 +26,7 @@ export const Navigation: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         {/* Logo */}
         <a href="#" className="flex-shrink-0">
-          <img src={asset('images/CURANDERA_logo.webp')} alt="CURANDERA" className="w-[320px] max-w-[75vw] h-auto" />
+          <img src={asset(isScrolled ? 'images/Curandera_logo_balanced_dark.webp' : 'images/Curandera_logo_balanced_light.webp')} alt="CURANDERA" className="w-[320px] max-w-[75vw] h-auto" />
         </a>
 
         {/* Desktop Menu */}
@@ -43,7 +43,7 @@ export const Navigation: React.FC = () => {
             </a>
           ))}
           <a href="#oferta" className={
-            'px-5 py-2 rounded-none text-body-l lowercase tracking-widest transition-all bg-black text-white hover:bg-curandera-accent'
+            'px-5 py-2 rounded-none text-body-l lowercase tracking-widest transition-all bg-curandera-dark text-white hover:bg-curandera-accent'
           }>
             Wybierz Pakiet
           </a>
