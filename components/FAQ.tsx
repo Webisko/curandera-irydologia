@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Section } from './Section';
-import { ChevronDown, ChevronUp } from 'lucide-react';
+import { Plus, Minus } from 'lucide-react';
 import { FaqItem } from '../types';
 
 const faqData: FaqItem[] = [
@@ -79,34 +79,46 @@ const faqData: FaqItem[] = [
 ];
 
 export const FAQ: React.FC = () => {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [openSet, setOpenSet] = useState<Set<number>>(new Set());
 
   return (
-    <Section id="faq" bg="soft">
+    <Section id="faq" bg="default">
       <div className="max-w-4xl mx-auto">
-        <h2 className="font-serif text-3xl md:text-4xl text-center mb-12 text-curandera-dark">Pytania i odpowiedzi</h2>
-        
-        <div className="space-y-4">
+        {/* Title styled like the reference: large, serif, accent */}
+        <h2 className="font-serif text-curandera-primary text-h-l text-center mb-12 lowercase">Pytania i odpowiedzi</h2>
+
+        {/* Minimal list style: accent-colored questions, plus/minus icons, no separators */}
+        <div className="space-y-2">
           {faqData.map((item, index) => (
-            <div key={index} className="bg-white rounded-none overflow-hidden shadow-sm border border-stone-100">
+            <div key={index} className="py-4">
               <button
-                className="w-full px-6 py-5 text-left flex justify-between items-start focus:outline-none group"
-                onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                className="w-full text-left flex items-center gap-3 group"
+                onClick={() => {
+                  setOpenSet(prev => {
+                    const next = new Set(prev);
+                    if (next.has(index)) {
+                      next.delete(index);
+                    } else {
+                      next.add(index);
+                    }
+                    return next;
+                  });
+                }}
               >
-                <span className={`font-serif text-lg text-curandera-dark pr-4 ${openIndex === index ? 'text-curandera-accent' : ''}`}>
+                <span className="text-curandera-accent">
+                  {openSet.has(index) ? <Minus size={30} strokeWidth={1} /> : <Plus size={30} strokeWidth={1} />}
+                </span>
+                <span className="font-serif text-h-m text-curandera-secondary">
                   {item.question}
                 </span>
-                <span className="text-stone-400 group-hover:text-curandera-accent transition-colors mt-1">
-                  {openIndex === index ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
-                </span>
               </button>
-              
-              <div 
+
+              <div
                 className={`transition-all duration-300 ease-in-out overflow-hidden ${
-                  openIndex === index ? 'max-h-[800px] opacity-100' : 'max-h-0 opacity-0'
+                  openSet.has(index) ? 'max-h-[1000px] opacity-100 mt-3' : 'max-h-0 opacity-0'
                 }`}
               >
-                <div className="px-6 pb-6 text-stone-600 font-sans leading-relaxed text-sm md:text-base border-t border-stone-100 pt-4">
+                <div className="pl-9 font-sans text-curandera-body font-normal leading-relaxed text-body-l">
                   {item.answer}
                 </div>
               </div>

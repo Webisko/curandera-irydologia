@@ -49,41 +49,44 @@ export const Pricing: React.FC = () => {
   };
 
   return (
-    <Section id="oferta" bg="white">
+    <Section id="oferta" bg="default">
       <div className="text-center mb-16">
-        <h2 className="font-serif text-3xl md:text-5xl text-curandera-dark mb-4">Oferta</h2>
-        <div className="w-24 h-1 bg-curandera-accent mx-auto opacity-50"></div>
-        <p className="mt-4 text-curandera-dark/70 uppercase tracking-widest text-sm">Wybierz drogę do zdrowia</p>
+        <h2 className="font-serif text-h-l text-curandera-primary mb-4 lowercase">Oferta</h2>
+        <p className="mt-4 text-curandera-dark/70 uppercase tracking-widest text-body-m">Wybierz drogę do zdrowia</p>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
+      <div className="grid md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto items-start">
         {packages.map((pkg, index) => (
           <div 
             key={pkg.id} 
             className={`
               relative rounded-none p-8 border transition-all duration-300 flex flex-col
-              ${index === 1 ? 'bg-[#FDFBF7] border-curandera-accent/30 shadow-xl' : 'bg-white border-stone-200 shadow-sm hover:shadow-md'}
+              ${index === 1 ? 'bg-curandera-bg border-curandera-accent/30 shadow-xl' : 'bg-curandera-bg border-stone-200 shadow-sm hover:shadow-md'}
             `}
           >
             {index === 1 && (
-              <div className="absolute top-0 right-0 bg-curandera-accent text-white text-xs px-4 py-1 rounded-none tracking-widest uppercase font-medium">
+              <div className="absolute top-0 right-0 bg-curandera-accent text-white text-body-m px-4 py-1 rounded-none tracking-widest uppercase font-medium">
                 Polecany
               </div>
             )}
 
             <div className="mb-6 text-center">
-              <h3 className="font-serif text-2xl md:text-3xl mb-2">{pkg.title}</h3>
-              <div className="text-4xl font-serif text-curandera-accent my-4">{pkg.price}</div>
-              <p className="text-sm text-curandera-dark/70 font-sans leading-relaxed min-h-[80px]">
+              <h3 className="font-serif text-h-m mb-2">{pkg.title}</h3>
+              <div className="text-h-l font-serif text-curandera-accent my-4">{pkg.price}</div>
+              <p className="text-body-l text-curandera-dark/70 font-sans leading-relaxed min-h-[80px]">
                 {pkg.shortDescription}
               </p>
             </div>
 
-            <ul className="space-y-4 mb-8 flex-grow">
+            <ul className="space-y-4 my-10 flex-grow">
               {pkg.features.map((feature, idx) => (
-                <li key={idx} className="flex items-start text-sm md:text-base text-curandera-dark/80">
-                  <span className="bg-curandera-soft rounded-none p-1 mr-3 mt-0.5 text-curandera-green flex-shrink-0">
-                    <Check size={14} />
+                <li key={idx} className="flex items-start text-body-m text-curandera-dark/80">
+                  <span
+                    className="flex items-center justify-center w-[20px] h-[20px] border-2 border-[#C75A00] bg-white rounded-none mr-3 mt-0.5 flex-shrink-0"
+                  >
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#C75A00" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
                   </span>
                   {feature}
                 </li>
@@ -91,29 +94,37 @@ export const Pricing: React.FC = () => {
             </ul>
 
             <div className="mt-auto space-y-4">
-              <Button className="w-full">
-                {index === 0 ? 'Kup pakiet I' : 'Kup pakiet II'}
+              <Button
+                className="w-full"
+                onClick={() => {
+                  const url = index === 0 
+                    ? 'https://curandera.pl/?add-to-cart=5392' 
+                    : 'https://curandera.pl/?add-to-cart=5401';
+                  window.open(url, '_blank');
+                }}
+              >
+                {index === 0 ? 'kup pakiet I' : 'kup pakiet II'}
               </Button>
-              
-              {/* Expandable Section */}
+              {/* Expandable Section - only for this package */}
               <div className="pt-4 border-t border-stone-100">
                 <button 
-                  onClick={() => toggleExpand(pkg.id)}
-                  className="flex items-center justify-center w-full text-xs uppercase tracking-widest text-curandera-dark/60 hover:text-curandera-accent transition-colors"
+                  onClick={() => setExpandedId(expandedId === pkg.id ? null : pkg.id)}
+                  className="flex items-center justify-center w-full text-body-m uppercase tracking-widest text-curandera-dark/60 hover:text-curandera-accent transition-colors"
                 >
                   {expandedId === pkg.id ? 'Ukryj szczegóły' : 'Więcej o pakiecie'}
                   {expandedId === pkg.id ? <ChevronUp size={16} className="ml-1"/> : <ChevronDown size={16} className="ml-1"/>}
                 </button>
-                
                 <div 
                   className={`
                     overflow-hidden transition-all duration-500 ease-in-out
                     ${expandedId === pkg.id ? 'max-h-[500px] opacity-100 mt-4' : 'max-h-0 opacity-0'}
                   `}
                 >
-                  <p className="text-sm text-stone-600 font-sans leading-relaxed whitespace-pre-line bg-curandera-soft/50 p-4 rounded-none">
-                    {pkg.detailsContent}
-                  </p>
+                  {expandedId === pkg.id && (
+                    <p className="text-body-m text-stone-600 font-sans leading-relaxed whitespace-pre-line bg-curandera-soft/50 p-4 rounded-none">
+                      {pkg.detailsContent}
+                    </p>
+                  )}
                 </div>
               </div>
             </div>

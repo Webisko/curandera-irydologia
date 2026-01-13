@@ -15,16 +15,52 @@
           extend: {
             colors: {
               curandera: {
-                bg: '#FDFBF7', // Cream/Beige background
-                dark: '#2C2420', // Dark brown/charcoal text
-                accent: '#C05621', // Rust/Orange
+                bg: '#FFFEFC', // Default background
+                dark: '#030303', // Dark text
+                accent: '#FBBC4E', // Accent color
                 soft: '#ECE8E1', // Soft beige for cards
+                alt: '#F9F2E8', // Alternative section/header/footer background
                 green: '#4A5D44', // Subtle nature green
+                primary: '#BE5705', // Primary heading color
+                secondary: '#A30000', // Secondary heading color
+                body: '#363636', // Body text color
               }
             },
             fontFamily: {
               serif: ['"Forum"', 'serif'],
               sans: ['"Forum"', 'serif'],
+            },
+            fontSize: {
+              // Fluid typography: responsive scaling with clamp()
+              'h-xl': 'clamp(40px, 3rem + 2vw, 68px)',    // Heading XL (68px max)
+              'h-l': 'clamp(32px, 2rem + 1.5vw, 48px)',   // Heading L (48px max)
+              'h-m': 'clamp(18px, 1.2rem + 0.5vw, 24px)', // Heading M (24px max)
+              'body-l': 'clamp(16px, 1rem + 0.5vw, 20px)', // Body L (20px max)
+              'body-m': 'clamp(14px, 0.8rem + 0.2vw, 16px)' // Body M (16px max)
+            },
+            animation: {
+              'slide-in-right': 'slideInRight 1s ease-in-out forwards',
+              'slide-out-left': 'slideOutLeft 1s ease-in-out forwards',
+              'slide-in-left': 'slideInLeft 1s ease-in-out forwards',
+              'slide-out-right': 'slideOutRight 1s ease-in-out forwards'
+            },
+            keyframes: {
+              slideInRight: {
+                '0%': { transform: 'translateX(100%)', opacity: '0' },
+                '100%': { transform: 'translateX(0)', opacity: '1' }
+              },
+              slideOutLeft: {
+                '0%': { transform: 'translateX(0)', opacity: '1' },
+                '100%': { transform: 'translateX(-100%)', opacity: '0' }
+              },
+              slideInLeft: {
+                '0%': { transform: 'translateX(-100%)', opacity: '0' },
+                '100%': { transform: 'translateX(0)', opacity: '1' }
+              },
+              slideOutRight: {
+                '0%': { transform: 'translateX(0)', opacity: '1' },
+                '100%': { transform: 'translateX(100%)', opacity: '0' }
+              }
             }
           }
         }
@@ -47,7 +83,7 @@
 </script>
 <link rel="stylesheet" href="/index.css">
 </head>
-  <body class="bg-curandera-bg text-curandera-dark antialiased">
+  <body class="bg-curandera-bg text-curandera-body antialiased text-body-l font-normal">
     <div id="root"></div>
   <script type="module" src="/index.tsx"></script>
 </body>

@@ -4,33 +4,24 @@ import { asset } from '../utils/asset';
 
 export const About: React.FC = () => {
   return (
-    <Section id="omnie">
-      <div className="grid md:grid-cols-2 gap-12 items-center">
-        {/* Images Column */}
-        <div className="relative">
-          <div className="relative z-10 rounded-none overflow-hidden shadow-2xl max-w-sm mx-auto">
-            <img 
-              src={asset('images/Olga.webp')} 
-              alt="Olga Michalik Portrait" 
-              className="w-full h-auto object-cover grayscale hover:grayscale-0 transition-all duration-700"
-            />
-          </div>
-          {/* Decorative Elements */}
-          <div className="absolute -bottom-6 -right-4 z-20 w-32 md:w-48 bg-white p-2 rounded-none shadow-lg rotate-3">
-             <div className="bg-curandera-bg h-24 md:h-32 flex items-center justify-center text-center p-2">
-                <span className="font-serif text-xs md:text-sm italic text-curandera-dark">Certyfikowany <br/> Irydolog</span>
-             </div>
-          </div>
-          <div className="absolute top-10 left-4 w-20 h-20 bg-curandera-accent/10 rounded-none -z-0 blur-xl"></div>
-        </div>
+    <div id="omnie" className="bg-curandera-bg min-h-screen grid md:grid-cols-2 gap-0">
+      {/* Images Column - Full width on left, no padding */}
+      <div className="relative h-48 md:h-screen overflow-hidden">
+        <img 
+          src={asset('images/Olga.webp')} 
+          alt="Olga Michalik Portrait" 
+          className="w-full h-full object-cover object-top"
+        />
+      </div>
 
-        {/* Text Column */}
-        <div className="space-y-6 md:pl-8">
-          <span className="text-curandera-accent uppercase tracking-widest text-sm font-medium">O mnie</span>
-          <h2 className="font-serif text-4xl md:text-5xl text-curandera-dark">Olga Michalik</h2>
-          <h3 className="text-xl font-light italic text-stone-500">Certyfikowany irydolog, fitoterapeuta, właścicielka marki Curandera.</h3>
+      {/* Text Column */}
+      <div className="py-16 md:py-24 px-4 sm:px-6 lg:px-12 md:px-16 flex flex-col justify-center min-h-screen">
+        <div className="space-y-6">
+          <span className="text-curandera-accent uppercase tracking-widest text-body-m font-medium">O mnie</span>
+          <h2 className="font-serif text-h-l text-curandera-primary">Olga Michalik</h2>
+          <h3 className="text-h-m font-light italic text-stone-500">Certyfikowany irydolog, fitoterapeuta, właścicielka marki Curandera.</h3>
           
-          <div className="space-y-4 text-stone-700 font-sans leading-relaxed text-lg">
+          <div className="space-y-4 text-stone-700 font-sans leading-relaxed text-body-l">
             <p>
               Moja droga do zdrowia zawsze wiodła przez naturę. Wierzę, że organizm ma niezwykłą zdolność do samoregulacji, jeśli tylko damy mu odpowiednie narzędzia.
             </p>
@@ -41,16 +32,8 @@ export const About: React.FC = () => {
               W swojej pracy stawiam na holistyczne podejście, empatię i rzetelną wiedzę. Nie oceniam, lecz pomagam zrozumieć sygnały płynące z ciała, byś mógł/mogła podjąć świadome decyzje służące Twojemu zdrowiu.
             </p>
           </div>
-          
-          <div className="pt-6">
-            <img 
-               src="https://picsum.photos/id/360/200/100" 
-               alt="Signature or decorative leaf" 
-               className="h-16 opacity-60 mix-blend-multiply"
-            />
-          </div>
         </div>
       </div>
-    </Section>
+    </div>
   );
 };

@@ -27,23 +27,24 @@ export const Process: React.FC = () => {
   ];
 
   return (
-    <Section id="proces" className="bg-curandera-dark text-white">
-      <div className="text-center mb-16">
-        <h2 className="font-serif text-3xl md:text-4xl mb-4">Jak wygląda proces?</h2>
-        <p className="opacity-80 font-sans font-light">Prosta droga do poznania swojego organizmu</p>
+    <Section id="proces" bg="alt" className="text-curandera-body">
+      <div className="text-center mb-10">
+        <h2 className="font-serif text-h-l text-curandera-primary mb-2">Jak wygląda proces?</h2>
+        {/* Usunięto zbędny podtytuł */}
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
         {/* Connection Line (Desktop) */}
-        <div className="hidden lg:block absolute top-8 left-[10%] right-[10%] h-px bg-white/20 z-0"></div>
+        <div className="hidden lg:block absolute top-8 left-[10%] right-[10%] h-px bg-curandera-secondary/20 z-0"></div>
 
         {steps.map((step, idx) => (
           <div key={idx} className="relative z-10 flex flex-col items-center text-center group">
-            <div className="w-16 h-16 rounded-full bg-curandera-accent flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform">
-              {step.icon}
+            <div className="w-16 h-16 rounded-full bg-curandera-accent flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform">
+              {/* Force icon color to white */}
+              <span className="text-white">{React.cloneElement(step.icon, { color: 'white' })}</span>
             </div>
-            <h3 className="font-serif text-xl mb-3">{step.title}</h3>
-            <p className="text-sm opacity-70 leading-relaxed max-w-[200px]">{step.desc}</p>
+            <h3 className="font-serif text-h-m mb-2 text-curandera-secondary">{step.title}</h3>
+            <p className="text-body-m leading-relaxed max-w-[220px] mx-auto text-curandera-body">{step.desc}</p>
           </div>
         ))}
       </div>

@@ -11,17 +11,13 @@ export const Button: React.FC<ButtonProps> = ({
   className = '', 
   ...props 
 }) => {
-  const baseStyles = "px-8 py-3 rounded-none transition-all duration-300 font-sans tracking-wide text-sm font-medium uppercase";
-  
-  const variants = {
-    primary: "bg-[#030303] text-white hover:bg-curandera-accent shadow-md hover:shadow-lg",
-    outline: "border border-[#030303] text-[#030303] hover:bg-[#030303] hover:text-white",
-    text: "text-curandera-dark underline decoration-curandera-accent/50 hover:decoration-curandera-accent"
-  };
+  // Custom style: dark background, white text, on hover dark border and dark text
+  const customStyles = "px-8 py-3 rounded-none transition-all duration-300 font-sans tracking-wide border border-curandera-dark bg-curandera-dark text-white text-h-m font-normal hover:bg-white hover:text-curandera-dark hover:border-curandera-dark shadow-md hover:shadow-lg";
 
+  // Always use customStyles for this button (for 'Kup analizę irydologiczną')
   return (
     <button 
-      className={`${baseStyles} ${variants[variant]} ${className}`} 
+      className={`${customStyles} ${className}`}
       {...props}
     >
       {children}

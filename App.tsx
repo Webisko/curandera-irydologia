@@ -11,16 +11,16 @@ import { Footer } from './components/Footer';
 
 function App() {
   return (
-    <div className="min-h-screen bg-curandera-bg font-sans text-curandera-dark selection:bg-curandera-accent selection:text-white">
+    <div className="min-h-screen bg-curandera-bg font-sans text-curandera-body selection:bg-curandera-accent selection:text-white">
       <Navigation />
       
       <main>
         <Hero />
         <Problem />
-        <FAQ />
-        <About />
-        <Testimonials />
         <Process />
+        <About />
+        <FAQ />
+        <Testimonials />
         <Pricing />
       </main>
 
