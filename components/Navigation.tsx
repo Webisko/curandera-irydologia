@@ -18,7 +18,6 @@ export const Navigation: React.FC = () => {
     { name: 'O Irydologii', href: '#faq' },
     { name: 'O Mnie', href: '#omnie' },
     { name: 'Opinie', href: '#opinie' },
-    { name: 'Kontakt', href: '#proces' },
   ];
 
   return (
