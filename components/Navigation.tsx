@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { asset } from '../utils/asset';
 
 export const Navigation: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -25,7 +26,7 @@ export const Navigation: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         {/* Logo */}
         <a href="#" className="flex-shrink-0">
-          <img src="/curandera-irydologia/images/CURANDERA_logo.webp" alt="CURANDERA" className="w-[320px] max-w-[75vw] h-auto" />
+          <img src={asset('images/CURANDERA_logo.webp')} alt="CURANDERA" className="w-[320px] max-w-[75vw] h-auto" />
         </a>
 
         {/* Desktop Menu */}
@@ -41,11 +42,9 @@ export const Navigation: React.FC = () => {
               {link.name}
             </a>
           ))}
-          <a href="#oferta" className={`px-5 py-2 rounded-none text-body-l lowercase tracking-widest transition-all ${
-            isScrolled 
-              ? 'bg-[#030303] text-white hover:bg-curandera-accent' 
-              : 'bg-white text-curandera-dark hover:bg-curandera-accent hover:text-white'
-          }`}>
+          <a href="#oferta" className={
+            'px-5 py-2 rounded-none text-body-l lowercase tracking-widest transition-all bg-black text-white hover:bg-curandera-accent'
+          }>
             Wybierz Pakiet
           </a>
         </div>
