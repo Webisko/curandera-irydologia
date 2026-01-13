@@ -98,8 +98,8 @@ export const Pricing: React.FC = () => {
                 className="w-full"
                 onClick={() => {
                   const url = index === 0 
-                    ? 'https://curandera.pl/?add-to-cart=5392' 
-                    : 'https://curandera.pl/?add-to-cart=5401';
+                    ? 'https://curandera.pl/?lp_package=5392&to=checkout' 
+                    : 'https://curandera.pl/?lp_package=5401&to=checkout';
                   window.open(url, '_blank');
                 }}
               >
