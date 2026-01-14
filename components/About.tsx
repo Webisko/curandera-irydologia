@@ -13,6 +13,8 @@ export const About: React.FC = () => {
         <img 
           src={asset('images/Olga.webp')} 
           alt="Olga Michalik Portrait" 
+          loading="lazy"
+          decoding="async"
           className="absolute inset-0 w-full h-full object-cover object-top"
         />
       </div>

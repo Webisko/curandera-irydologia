@@ -10,6 +10,9 @@ export const Hero: React.FC = () => {
         <img 
           src={asset('images/hero_3.webp')} 
           alt="Zbliżenie na tęczówkę oka" 
+          loading="eager"
+          decoding="async"
+          fetchPriority="high"
           className="w-full h-full object-cover object-center"
         />
         {/* Dark overlay gradient from left */}

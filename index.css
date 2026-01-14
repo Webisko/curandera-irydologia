@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  a {
+    @apply text-curandera-secondary font-normal no-underline transition-colors;
+  }
+
+  a:hover {
+    @apply text-curandera-accent;
+  }
+}
+
+/* Exception: italic only for specific button */
+.button-qualifications {
+  font-style: italic;
+}

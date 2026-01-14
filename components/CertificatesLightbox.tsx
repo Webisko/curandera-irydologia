@@ -182,6 +182,8 @@ export const CertificatesLightbox: React.FC<CertificatesLightboxProps> = ({ isOp
             <img
               src={asset(cert.path)}
               alt={`Miniatura: ${cert.name}`}
+              loading="lazy"
+              decoding="async"
               className="w-full h-full object-cover"
             />
           </button>
