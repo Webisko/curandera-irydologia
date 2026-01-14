@@ -50,18 +50,35 @@ export const Navigation: React.FC = () => {
         </div>
 
         {/* Mobile Toggle */}
-        <button className={`lg:hidden transition-colors ${
-          isScrolled ? 'text-curandera-dark' : 'text-white'
-        }`} onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+        <button
+          type="button"
+          aria-label={mobileMenuOpen ? 'Zamknij menu' : 'Otwórz menu'}
+          aria-expanded={mobileMenuOpen}
+          aria-controls="mobile-menu"
+          className={`lg:hidden transition-colors ${
+            isScrolled ? 'text-curandera-dark' : 'text-white'
+          }`}
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+        >
           <div className="relative w-7 h-7">
-            <Menu size={28} className={`absolute inset-0 transition-all duration-300 ${mobileMenuOpen ? 'opacity-0 rotate-90' : 'opacity-100 rotate-0'}`} />
-            <X size={28} className={`absolute inset-0 transition-all duration-300 ${mobileMenuOpen ? 'opacity-100 rotate-0' : 'opacity-0 -rotate-90'}`} />
+            <Menu
+              size={28}
+              aria-hidden="true"
+              className={`absolute inset-0 transition-all duration-300 ${mobileMenuOpen ? 'opacity-0 rotate-90' : 'opacity-100 rotate-0'}`}
+            />
+            <X
+              size={28}
+              aria-hidden="true"
+              className={`absolute inset-0 transition-all duration-300 ${mobileMenuOpen ? 'opacity-100 rotate-0' : 'opacity-0 -rotate-90'}`}
+            />
           </div>
         </button>
       </div>
 
       {/* Mobile Menu */}
-      <div className={`absolute top-full left-0 w-full bg-curandera-bg shadow-lg lg:hidden flex flex-col items-center py-8 space-y-6 transition-all duration-800 overflow-hidden z-40 ${
+      <div
+        id="mobile-menu"
+        className={`absolute top-full left-0 w-full bg-curandera-bg shadow-lg lg:hidden flex flex-col items-center py-8 space-y-6 transition-all duration-800 overflow-hidden z-40 ${
         mobileMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full pointer-events-none'
       }`}>
          {navLinks.map((link) => (

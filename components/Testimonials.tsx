@@ -103,10 +103,12 @@ export const Testimonials: React.FC = () => {
         >
           {/* Left Arrow - Absolute positioning on mobile */}
           <button
+            type="button"
+            aria-label="Poprzednia opinia"
             onClick={goPrev}
             className="absolute left-0 sm:relative sm:left-0 flex-shrink-0 p-1.5 sm:p-2 border border-curandera-primary text-curandera-primary hover:bg-curandera-primary hover:text-white transition-colors rounded-full z-20 bg-transparent"
           >
-            <ChevronLeft size={20} />
+            <ChevronLeft size={20} aria-hidden="true" />
           </button>
 
           {/* Carousel Container with overflow hidden */}
@@ -165,10 +167,12 @@ export const Testimonials: React.FC = () => {
 
           {/* Right Arrow - Absolute positioning on mobile */}
           <button
+            type="button"
+            aria-label="Następna opinia"
             onClick={goNext}
             className="absolute right-0 sm:relative sm:right-0 flex-shrink-0 p-1.5 sm:p-2 border border-curandera-primary text-curandera-primary hover:bg-curandera-primary hover:text-white transition-colors rounded-full z-20 bg-transparent"
           >
-            <ChevronRight size={20} />
+            <ChevronRight size={20} aria-hidden="true" />
           </button>
         </div>
       </div>

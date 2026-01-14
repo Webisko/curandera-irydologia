@@ -84,7 +84,7 @@ export const Pricing: React.FC = () => {
                   <span
                     className="flex items-center justify-center w-[20px] h-[20px] border-2 border-curandera-primary bg-white rounded-none mr-3 mt-0.5 flex-shrink-0"
                   >
-                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#BE5705" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                    <svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#BE5705" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
                       <polyline points="20 6 9 17 4 12" />
                     </svg>
                   </span>
@@ -108,13 +108,19 @@ export const Pricing: React.FC = () => {
               {/* Expandable Section - only for this package */}
               <div className="pt-4 border-t border-stone-100">
                 <button 
+                  type="button"
+                  aria-expanded={expandedId === pkg.id}
+                  aria-controls={`package-details-${pkg.id}`}
                   onClick={() => setExpandedId(expandedId === pkg.id ? null : pkg.id)}
                   className="flex items-center justify-center w-full text-body-m uppercase tracking-widest text-curandera-dark/60 hover:text-curandera-accent transition-colors"
                 >
                   {expandedId === pkg.id ? 'Ukryj szczegóły' : 'Więcej o pakiecie'}
-                  {expandedId === pkg.id ? <ChevronUp size={16} className="ml-1"/> : <ChevronDown size={16} className="ml-1"/>}
+                  {expandedId === pkg.id
+                    ? <ChevronUp size={16} className="ml-1" aria-hidden="true" />
+                    : <ChevronDown size={16} className="ml-1" aria-hidden="true" />}
                 </button>
                 <div 
+                  id={`package-details-${pkg.id}`}
                   className={`
                     overflow-hidden transition-all duration-500 ease-in-out
                     ${expandedId === pkg.id ? 'max-h-[500px] opacity-100 mt-4' : 'max-h-0 opacity-0'}

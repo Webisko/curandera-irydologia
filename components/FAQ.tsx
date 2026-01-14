@@ -92,6 +92,9 @@ export const FAQ: React.FC = () => {
           {faqData.map((item, index) => (
             <div key={index} className="py-4">
               <button
+                type="button"
+                aria-expanded={openSet.has(index)}
+                aria-controls={`faq-panel-${index}`}
                 className="w-full text-left flex items-center gap-3 group"
                 onClick={() => {
                   setOpenSet(prev => {
@@ -106,7 +109,9 @@ export const FAQ: React.FC = () => {
                 }}
               >
                 <span className="text-curandera-accent">
-                  {openSet.has(index) ? <Minus size={30} strokeWidth={1} /> : <Plus size={30} strokeWidth={1} />}
+                  {openSet.has(index)
+                    ? <Minus size={30} strokeWidth={1} aria-hidden="true" />
+                    : <Plus size={30} strokeWidth={1} aria-hidden="true" />}
                 </span>
                 <span className="font-serif text-h-m text-curandera-secondary">
                   {item.question}
@@ -114,6 +119,7 @@ export const FAQ: React.FC = () => {
               </button>
 
               <div
+                id={`faq-panel-${index}`}
                 className={`transition-all duration-300 ease-in-out overflow-hidden ${
                   openSet.has(index) ? 'max-h-[1000px] opacity-100 mt-3' : 'max-h-0 opacity-0'
                 }`}
