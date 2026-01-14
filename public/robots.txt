@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://irydologia.curandera.pl/sitemap.xml
