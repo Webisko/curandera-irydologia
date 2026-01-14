@@ -27,6 +27,9 @@ jobs:
       - name: Build project
         run: npm run build
 
+      - name: Copy .htaccess to build
+        run: cp public/.htaccess docs/
+
       - name: Setup SSH
         run: |
           mkdir -p ~/.ssh
