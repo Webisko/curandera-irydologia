@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Section } from './Section';
 import { Star, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Testimonial } from '../types';
@@ -30,6 +30,8 @@ export const Testimonials: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const [expandedStates, setExpandedStates] = useState<{ [key: number]: boolean }>({});
+  const [overflowStates, setOverflowStates] = useState<{ [key: number]: boolean }>({});
+  const textRefs = useRef<{ [key: number]: HTMLDivElement | null }>({});
 
   const toggleExpanded = (index: number) => {
     setExpandedStates(prev => ({ ...prev, [index]: !prev[index] }));
@@ -42,6 +44,40 @@ export const Testimonials: React.FC = () => {
   const goPrev = () => {
     setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
+
+  // Check for overflow on mount and window resize
+  useEffect(() => {
+    const checkOverflow = () => {
+      const newOverflowStates: { [key: number]: boolean } = {};
+      testimonials.forEach((_, index) => {
+        const ref = textRefs.current[index];
+        if (ref) {
+          // Temporarily remove height restrictions to measure full height
+          const currentMaxHeight = ref.style.maxHeight;
+          const currentOverflow = ref.style.overflow;
+          ref.style.maxHeight = 'none';
+          ref.style.overflow = 'visible';
+          
+          const fullHeight = ref.scrollHeight;
+          
+          // Restore original styles
+          ref.style.maxHeight = currentMaxHeight;
+          ref.style.overflow = currentOverflow;
+          
+          // Check against mobile/desktop breakpoints (14rem = 224px, 18rem = 288px)
+          const isMobile = window.innerWidth < 768;
+          const maxHeight = isMobile ? 224 : 288;
+          newOverflowStates[index] = fullHeight > maxHeight;
+        }
+      });
+      setOverflowStates(newOverflowStates);
+    };
+
+    // Delay check to ensure content is rendered
+    setTimeout(checkOverflow, 100);
+    window.addEventListener('resize', checkOverflow);
+    return () => window.removeEventListener('resize', checkOverflow);
+  }, [currentIndex]);
 
   // Autoplay effect
   useEffect(() => {
@@ -90,24 +126,30 @@ export const Testimonials: React.FC = () => {
                     <div className="relative">
                       {(() => {
                         const isExpanded = !!expandedStates[index];
+                        const hasOverflow = !!overflowStates[index];
                         const clampClasses = !isExpanded ? 'max-h-[14rem] md:max-h-[18rem] overflow-hidden' : '';
 
                         return (
                           <>
-                            <div className={`relative ${clampClasses}`}>
+                            <div 
+                              ref={(el) => (textRefs.current[index] = el)}
+                              className={`relative ${clampClasses}`}
+                            >
                               <p className="font-sans text-body-l text-curandera-body mb-4 leading-relaxed">
                                 &ldquo;{t.text}&rdquo;
                               </p>
-                              {!isExpanded && (
+                              {hasOverflow && !isExpanded && (
                                 <div className="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-curandera-bg via-curandera-bg/70 to-transparent" />
                               )}
                             </div>
-                            <button
-                              onClick={() => toggleExpanded(index)}
-                              className="text-curandera-primary text-body-m font-semibold hover:text-curandera-accent transition-colors mb-4"
-                            >
-                              {isExpanded ? 'Zwiń' : 'Czytaj więcej'}
-                            </button>
+                            {hasOverflow && (
+                              <button
+                                onClick={() => toggleExpanded(index)}
+                                className="text-curandera-primary text-body-m font-semibold hover:text-curandera-accent transition-colors mb-4"
+                              >
+                                {isExpanded ? 'Zwiń' : 'Czytaj więcej'}
+                              </button>
+                            )}
                           </>
                         );
                       })()}
