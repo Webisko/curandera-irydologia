@@ -17,18 +17,11 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Clean dependencies
-        run: |
-          rm -rf node_modules package-lock.json
-
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Build project
         run: npm run build
-
-      - name: Copy .htaccess to build
-        run: cp public/.htaccess docs/
 
       - name: Setup SSH
         run: |
@@ -41,8 +34,8 @@ jobs:
         run: |
           rsync -avz --delete \
             -e "ssh -i ~/.ssh/deploy_key -p ${{ secrets.SSH_PORT }} -o StrictHostKeyChecking=no" \
-            ./docs/ \
-            ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/home/${{ secrets.SSH_USER }}/domains/irydologia.curandera.pl/public_html/
+            ./dist/ \
+            ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.SSH_TARGET_DIR }}/
 
       - name: Cleanup SSH key
         if: always()

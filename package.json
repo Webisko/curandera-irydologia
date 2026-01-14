@@ -6,12 +6,12 @@
   "scripts": {
     "dev": "vite --host --port 3002 --strictPort",
     "build": "vite build",
+    "postbuild": "node scripts/copy-htaccess.cjs",
     "preview": "vite preview",
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
     "lint:fix": "eslint . --ext .ts,.tsx,.js,.jsx --fix",
     "format": "prettier --write .",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "typecheck": "tsc -p tsconfig.json --noEmit"
   },
   "dependencies": {
     "lucide-react": "^0.562.0",
@@ -26,11 +26,9 @@
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-react": "^7.37.2",
     "eslint-plugin-react-hooks": "^5.0.0",
-    "gh-pages": "^6.1.1",
     "postcss": "^8.5.6",
     "prettier": "^3.4.2",
     "prettier-plugin-tailwindcss": "^0.6.7",
-    "sharp": "^0.34.5",
     "tailwindcss": "^3.4.17",
     "typescript": "~5.8.2",
     "typescript-eslint": "^8.15.0",

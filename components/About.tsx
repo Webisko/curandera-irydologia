@@ -23,7 +23,7 @@ export const About: React.FC = () => {
       <div className="py-16 md:py-24 px-6 sm:px-8 md:px-12 lg:px-16 flex flex-col justify-center">
         <div className="bg-curandera-bg p-6 sm:p-8 lg:p-10">
           <div className="space-y-6">
-            <span className="text-curandera-accent uppercase tracking-widest text-h-m font-medium lowercase">o mnie</span>
+            <span className="text-curandera-accent lowercase tracking-widest text-h-m font-medium">o mnie</span>
             <h2 className="font-serif text-h-l text-curandera-primary mt-0" style={{marginTop: 0}}>Olga Michalik</h2>
             <h3 className="text-body-l font-light italic text-curandera-dark border-l-4 border-curandera-accent pl-4">
               Certyfikowany irydolog, fitoterapeuta, właścicielka marki Curandera —{' '}

@@ -1,20 +1,27 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Curandera Irydologia — landing page
 
-# Run and deploy your AI Studio app
+Statyczny landing page zbudowany w React + Vite + Tailwind.
 
-This contains everything you need to run your app locally.
+## Lokalne uruchomienie
 
-View your app in AI Studio: https://ai.studio/apps/drive/1v-3VCwzugZz5Y191DUq4ad3hhjq6EqAv
+Wymagania: Node.js
 
-## Run Locally
+1. Instalacja zależności: `npm install`
+2. Start dev servera: `npm run dev` (domyślnie `http://localhost:3002`)
 
-**Prerequisites:**  Node.js
+## Build
 
+- Build produkcyjny: `npm run build` (output do `dist/`)
+- Typecheck: `npm run typecheck`
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Deploy (custom hosting)
+
+Deploy jest robiony automatycznie przez GitHub Actions (workflow w `.github/workflows/deploy-server.yml`) po pushu na branch główny.
+
+Wymagane sekrety w repo (Settings → Secrets and variables → Actions):
+
+- `SSH_HOST`
+- `SSH_PORT`
+- `SSH_USER`
+- `SSH_PRIVATE_KEY`
+- `SSH_TARGET_DIR` (np. `/home/srv66853/domains/irydologia.curandera.pl/public_html`)
