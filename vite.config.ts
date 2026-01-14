@@ -6,6 +6,9 @@ export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
     return {
       base: mode === 'production' ? '/curandera-irydologia/' : '/',
+      build: {
+        outDir: 'docs'
+      },
       server: {
         port: 3001,
         host: '0.0.0.0',
