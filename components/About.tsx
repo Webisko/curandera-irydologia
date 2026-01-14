@@ -27,7 +27,7 @@ export const About: React.FC = () => {
               Certyfikowany irydolog, fitoterapeuta, właścicielka marki Curandera —{' '}
               <button
                 onClick={() => setShowCertificates(true)}
-                className="text-curandera-secondary hover:text-curandera-accent transition-colors font-normal italic"
+                className="text-curandera-secondary hover:text-curandera-accent transition-colors font-normal button-qualifications"
               >
                 sprawdź moje kwalifikacje
               </button>
@@ -35,13 +35,16 @@ export const About: React.FC = () => {
 
             <div className="space-y-4 text-curandera-body font-sans leading-relaxed text-body-l">
               <p>
-                Moja droga do zdrowia zawsze wiodła przez naturę. Wierzę, że organizm ma niezwykłą zdolność do samoregulacji, jeśli tylko damy mu odpowiednie narzędzia.
+                Nazywam się Olga Michalik. Jestem certyfikowanym irydologiem, zielarzem-fitoterapeutą i twórczynią marki Curandera. W przeszłości pracowałam również z ciałem jako trener personalny, dzięki czemu posiadam szeroką wiedzę na temat pracy ze zdrowiem człowieka – od kwestii związanych z odżywianiem i treningiem, poprzez dobór naturalnej suplementacji.
               </p>
               <p>
-                Jako irydolog łączę wiedzę o fizjologii z wnikliwą obserwacją. Tęczówka oka jest dla mnie fascynującą mapą, która opowiada historię Twojego zdrowia – nie tylko fizycznego, ale i emocjonalnego.
+                W irydologii najbardziej fascynuje mnie, to że ciało nieustannie komunikuje się z nami, a my możemy nauczyć się je „czytać” i tym samym znacząco poprawić jakość swojego życia. Podczas analizy irydologicznej online patrzę szerzej na człowieka – na konstytucję ciała, obciążenia, tempo regeneracji, poziom skumulowanych toksyn.
               </p>
               <p>
-                W swojej pracy stawiam na holistyczne podejście, empatię i rzetelną wiedzę. Nie oceniam, lecz pomagam zrozumieć sygnały płynące z ciała, byś mógł/mogła podjąć świadome decyzje służące Twojemu zdrowiu.
+                Łączę irydologię z ziołolecznictwem i pracą z grzybami witalnymi, ale zawsze dobieram wsparcie indywidualnie. Nie jestem zwolenniczką szybkich rozwiązań i maskowania objawów. Interesuje mnie to, jak działa organizm i gdzie leży przyczyna dolegliwości.
+              </p>
+              <p>
+                Jeśli szukasz spokojnego, uważnego podejścia do zdrowia – jesteś w dobrym miejscu.<br />Na co dzień dzielę się swoją wiedzą na Instagramie <a href="https://instagram.com/olgamichalik_" target="_blank" rel="noopener" className="text-curandera-secondary hover:text-curandera-accent transition-colors font-normal">@olgamichalik_</a>.
               </p>
             </div>
           </div>

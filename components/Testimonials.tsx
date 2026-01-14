@@ -68,7 +68,7 @@ export const Testimonials: React.FC = () => {
           {/* Left Arrow - Absolute positioning on mobile */}
           <button
             onClick={goPrev}
-            className="absolute left-2 sm:relative sm:left-0 flex-shrink-0 p-1.5 sm:p-2 border border-curandera-primary text-curandera-primary hover:bg-curandera-primary hover:text-white transition-colors rounded-full z-20 bg-curandera-bg sm:bg-transparent"
+            className="absolute left-0 sm:relative sm:left-0 flex-shrink-0 p-1.5 sm:p-2 border border-curandera-primary text-curandera-primary hover:bg-curandera-primary hover:text-white transition-colors rounded-full z-20 bg-transparent"
           >
             <ChevronLeft size={20} />
           </button>
@@ -90,8 +90,7 @@ export const Testimonials: React.FC = () => {
                     <div className="relative">
                       {(() => {
                         const isExpanded = !!expandedStates[index];
-                        const isLong = t.text.length > 520;
-                        const clampClasses = !isExpanded ? 'max-h-[17rem] overflow-hidden' : '';
+                        const clampClasses = !isExpanded ? 'max-h-[14rem] md:max-h-[18rem] overflow-hidden' : '';
 
                         return (
                           <>
@@ -99,18 +98,16 @@ export const Testimonials: React.FC = () => {
                               <p className="font-sans text-body-l text-curandera-body mb-4 leading-relaxed">
                                 &ldquo;{t.text}&rdquo;
                               </p>
-                              {isLong && !isExpanded && (
+                              {!isExpanded && (
                                 <div className="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-curandera-bg via-curandera-bg/70 to-transparent" />
                               )}
                             </div>
-                            {isLong && (
-                              <button
-                                onClick={() => toggleExpanded(index)}
-                                className="text-curandera-primary text-body-m font-semibold hover:text-curandera-accent transition-colors mb-4"
-                              >
-                                {isExpanded ? 'Zwiń' : 'Czytaj więcej'}
-                              </button>
-                            )}
+                            <button
+                              onClick={() => toggleExpanded(index)}
+                              className="text-curandera-primary text-body-m font-semibold hover:text-curandera-accent transition-colors mb-4"
+                            >
+                              {isExpanded ? 'Zwiń' : 'Czytaj więcej'}
+                            </button>
                           </>
                         );
                       })()}
@@ -127,7 +124,7 @@ export const Testimonials: React.FC = () => {
           {/* Right Arrow - Absolute positioning on mobile */}
           <button
             onClick={goNext}
-            className="absolute right-2 sm:relative sm:right-0 flex-shrink-0 p-1.5 sm:p-2 border border-curandera-primary text-curandera-primary hover:bg-curandera-primary hover:text-white transition-colors rounded-full z-20 bg-curandera-bg sm:bg-transparent"
+            className="absolute right-0 sm:relative sm:right-0 flex-shrink-0 p-1.5 sm:p-2 border border-curandera-primary text-curandera-primary hover:bg-curandera-primary hover:text-white transition-colors rounded-full z-20 bg-transparent"
           >
             <ChevronRight size={20} />
           </button>

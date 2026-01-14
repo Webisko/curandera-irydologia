@@ -31,7 +31,6 @@ const packages: Package[] = [
       'Pełna analiza irydologiczna online jak w Pakiecie I',
       'Indywidualny plan naturalnej suplementacji (PDF)',
       'Indywidualne zalecenia dotyczące wsparcia zdrowia poszczególnych narządów ciała (PDF)',
-      '2 konsultacje mailowe w przypadku dodatkowych pytań',
       'Wsparcie w doborze ziół i ekstraktów'
     ],
     detailsTitle: 'Długi opis Pakietu II',
@@ -55,12 +54,12 @@ export const Pricing: React.FC = () => {
         <p className="text-curandera-dark/70 text-body-l lowercase font-sans">wybierz drogę do zdrowia</p>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto items-start">
+      <div className="grid md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto items-stretch">
         {packages.map((pkg, index) => (
           <div 
             key={pkg.id} 
             className={`
-              relative rounded-none p-8 border transition-all duration-300 flex flex-col
+              relative rounded-none p-8 border transition-all duration-300 flex flex-col min-h-full
               ${index === 1 ? 'bg-curandera-bg border-curandera-accent/30 shadow-xl' : 'bg-curandera-bg border-stone-200 shadow-sm hover:shadow-md'}
             `}
           >
@@ -70,15 +69,15 @@ export const Pricing: React.FC = () => {
               </div>
             )}
 
-            <div className="mb-6 text-center">
+            <div className="mb-8 text-center">
               <h3 className="font-serif text-h-m mb-2 text-curandera-secondary">{pkg.title}</h3>
               <div className="text-h-l font-serif text-curandera-accent my-4">{pkg.price}</div>
-              <p className="text-body-l text-curandera-dark/70 font-sans leading-relaxed min-h-[80px]">
+              <p className="text-body-l text-curandera-dark/70 font-sans leading-relaxed">
                 {pkg.shortDescription}
               </p>
             </div>
 
-            <ul className="space-y-4 my-10 flex-grow">
+            <ul className="space-y-4 flex-grow">
               {pkg.features.map((feature, idx) => (
                 <li key={idx} className="flex items-start text-body-m text-curandera-dark/80">
                   <span
@@ -93,7 +92,7 @@ export const Pricing: React.FC = () => {
               ))}
             </ul>
 
-            <div className="mt-auto space-y-4">
+            <div className="mt-auto pt-10 space-y-4">
               <Button
                 className="w-full"
                 onClick={() => {
