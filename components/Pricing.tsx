@@ -110,7 +110,7 @@ export const Pricing: React.FC = () => {
                   onClick={() => setExpandedId(expandedId === pkg.id ? null : pkg.id)}
                   className="flex items-center justify-center w-full text-body-m uppercase tracking-widest text-curandera-dark/60 hover:text-curandera-accent transition-colors"
                 >
-                  {expandedId === pkg.id ? 'Ukryj szczegóły' : 'Więcej o pakiecie'}
+                  {expandedId === pkg.id ? 'Ukryj szczegóły' : 'czytaj więcej'}}
                   {expandedId === pkg.id ? <ChevronUp size={16} className="ml-1"/> : <ChevronDown size={16} className="ml-1"/>}
                 </button>
                 <div 

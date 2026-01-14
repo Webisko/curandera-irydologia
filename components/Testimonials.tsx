@@ -147,7 +147,7 @@ export const Testimonials: React.FC = () => {
                                 onClick={() => toggleExpanded(index)}
                                 className="text-curandera-primary text-body-m font-semibold hover:text-curandera-accent transition-colors mb-4"
                               >
-                                {isExpanded ? 'Zwiń' : 'Czytaj więcej'}
+                                {isExpanded ? 'zwiń' : 'czytaj więcej'}
                               </button>
                             )}
                           </>
