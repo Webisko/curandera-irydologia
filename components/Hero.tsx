@@ -7,14 +7,20 @@ export const Hero: React.FC = () => {
     <div className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background Image - Left Aligned */}
       <div className="absolute inset-0 z-0">
-        <img 
-          src={asset('images/hero_3.webp')} 
-          alt="Zbliżenie na tęczówkę oka" 
-          loading="eager"
-          decoding="async"
-          fetchPriority="high"
-          className="w-full h-full object-cover object-center"
-        />
+        <picture>
+          <source 
+            media="(max-width: 768px)" 
+            srcSet={asset('images/hero_3_mobile.webp')}
+          />
+          <img 
+            src={asset('images/hero_3.webp')} 
+            alt="Zbliżenie na tęczówkę oka" 
+            loading="eager"
+            decoding="async"
+            fetchPriority="high"
+            className="w-full h-full object-cover object-center"
+          />
+        </picture>
         {/* Dark overlay gradient from left */}
         <div className="absolute inset-0 bg-gradient-to-r from-curandera-dark/80 via-curandera-dark/60 to-transparent"></div>
       </div>
