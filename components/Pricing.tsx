@@ -26,12 +26,13 @@ const packages: Package[] = [
     id: 'extended',
     title: 'pakiet II',
     price: '299 zł',
-    shortDescription: 'Rozszerzona analiza irydologiczna z indywidualnymi zaleceniami i naturalną suplementacją dopasowaną do Twoich potrzeb.',
+    shortDescription: 'Kompleksowa analiza irydologiczna z indywidualnymi zaleceniami i naturalną suplementacją dopasowaną do Twoich potrzeb.',
     features: [
       'Pełna analiza irydologiczna online jak w Pakiecie I',
       'Indywidualny plan naturalnej suplementacji (PDF)',
       'Indywidualne zalecenia dotyczące wsparcia zdrowia poszczególnych narządów ciała (PDF)',
-      'Wsparcie w doborze ziół i ekstraktów'
+      'Wsparcie w doborze ziół i ekstraktów',
+      '1 konsultacja mailowa w przypadku dodatkowych pytań'
     ],
     detailsTitle: 'Długi opis Pakietu II',
     detailsContent: `Pakiet II to kompleksowe narzędzie do pracy nad zdrowiem. Oprócz pełnej analizy stanu organizmu (identycznej jak w Pakiecie I), otrzymasz konkretny plan działania.
