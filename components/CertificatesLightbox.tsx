@@ -92,106 +92,100 @@ export const CertificatesLightbox: React.FC<CertificatesLightboxProps> = ({ isOp
 
   return (
     <div
-      className="fixed inset-0 z-50 bg-black/60 flex items-center justify-center p-4 animate-fadeIn"
+      className="fixed inset-0 z-50 bg-black/60 flex flex-col"
       onClick={onClose}
     >
-      <div
-        className="relative bg-white rounded-lg shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden flex flex-col"
+      {/* Close button - always visible */}
+      <button
+        onClick={onClose}
+        className="absolute top-4 right-4 z-20 p-2 rounded-full bg-white hover:bg-curandera-accent hover:text-white transition-colors"
+        aria-label="Zamknij galerię"
+      >
+        <X size={24} />
+      </button>
+
+      {/* Main image area - flex-1 to take remaining space */}
+      <div 
+        className="flex-1 flex items-center justify-center px-4 py-4 overflow-hidden"
+        onMouseMove={handleMouseMove}
+        onMouseUp={handleMouseUp}
+        onMouseLeave={handleMouseUp}
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Close button */}
+        <div className="relative w-full h-full flex items-center justify-center">
+          <img
+            key={`main-${currentIndex}`}
+            src={asset(certificates[currentIndex].path)}
+            alt={certificates[currentIndex].name}
+            className={`transition-opacity duration-300 object-contain w-full h-full ${
+              isTransitioning ? 'opacity-0' : 'opacity-100'
+            } ${zoom > 1 ? 'cursor-grab active:cursor-grabbing' : 'cursor-zoom-in'}`}
+            style={{
+              transform: `scale(${zoom}) translate(${offset.x}px, ${offset.y}px)`,
+              userSelect: 'none',
+            }}
+            onMouseDown={handleMouseDown}
+            draggable={false}
+          />
+        </div>
+
+        {/* Zoom button */}
         <button
-          onClick={onClose}
-          className="absolute top-4 right-4 z-10 p-2 rounded-full bg-white hover:bg-curandera-accent hover:text-white transition-colors"
-          aria-label="Zamknij galerię"
+          onClick={(e) => {
+            e.stopPropagation();
+            toggleZoom();
+          }}
+          className="absolute top-4 left-4 p-2 rounded-full bg-curandera-accent text-white hover:bg-curandera-secondary transition-colors z-10"
+          aria-label={zoom === 1 ? 'Powiększ' : 'Zmniejsz'}
+          title={zoom === 1 ? 'Powiększ (2x)' : 'Zmniejsz'}
         >
-          <X size={24} />
+          {zoom === 1 ? <ZoomIn size={20} /> : <ZoomOut size={20} />}
         </button>
 
-        {/* Main image container - transparent background */}
-        <div 
-          className="relative flex-1 overflow-hidden flex items-center justify-center"
-          onMouseMove={handleMouseMove}
-          onMouseUp={handleMouseUp}
-          onMouseLeave={handleMouseUp}
+        {/* Arrow Navigation */}
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            goToPrevious();
+          }}
+          className="absolute left-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-curandera-dark/70 hover:bg-curandera-dark transition-colors text-white z-10"
+          aria-label="Poprzednie zdjęcie"
         >
-          <div className="relative w-full h-full flex items-center justify-center">
+          <ChevronLeft size={28} />
+        </button>
+
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            goToNext();
+          }}
+          className="absolute right-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-curandera-dark/70 hover:bg-curandera-dark transition-colors text-white z-10"
+          aria-label="Następne zdjęcie"
+        >
+          <ChevronRight size={28} />
+        </button>
+      </div>
+
+      {/* Thumbnails - always at bottom */}
+      <div className="px-4 py-4 flex gap-3 justify-center" onClick={(e) => e.stopPropagation()}>
+        {certificates.map((cert, index) => (
+          <button
+            key={cert.id}
+            onClick={() => goToIndex(index)}
+            className={`relative rounded overflow-hidden transition-all duration-200 flex-shrink-0 ${
+              currentIndex === index
+                ? 'ring-2 ring-curandera-accent scale-105'
+                : 'opacity-60 hover:opacity-100 hover:scale-105'
+            }`}
+            style={{ width: '80px', height: '80px' }}
+          >
             <img
-              key={`main-${currentIndex}`}
-              src={asset(certificates[currentIndex].path)}
-              alt={certificates[currentIndex].name}
-              className={`transition-opacity duration-300 object-contain ${
-                isTransitioning ? 'opacity-0' : 'opacity-100'
-              } ${zoom > 1 ? 'cursor-grab active:cursor-grabbing' : 'cursor-zoom-in'}`}
-              style={{
-                transform: `scale(${zoom}) translate(${offset.x}px, ${offset.y}px)`,
-                maxWidth: '100%',
-                maxHeight: '100%',
-                userSelect: 'none',
-              }}
-              onMouseDown={handleMouseDown}
-              draggable={false}
+              src={asset(cert.path)}
+              alt={`Miniatura: ${cert.name}`}
+              className="w-full h-full object-cover"
             />
-          </div>
-
-          {/* Zoom button */}
-          <button
-            onClick={(e) => {
-              e.stopPropagation();
-              toggleZoom();
-            }}
-            className="absolute top-4 left-4 p-2 rounded-full bg-curandera-accent text-white hover:bg-curandera-secondary transition-colors z-10"
-            aria-label={zoom === 1 ? 'Powiększ' : 'Zmniejsz'}
-            title={zoom === 1 ? 'Powiększ (2x)' : 'Zmniejsz'}
-          >
-            {zoom === 1 ? <ZoomIn size={20} /> : <ZoomOut size={20} />}
           </button>
-
-          {/* Arrow Navigation */}
-          <button
-            onClick={(e) => {
-              e.stopPropagation();
-              goToPrevious();
-            }}
-            className="absolute left-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-curandera-dark/70 hover:bg-curandera-dark transition-colors text-white z-10"
-            aria-label="Poprzednie zdjęcie"
-          >
-            <ChevronLeft size={28} />
-          </button>
-
-          <button
-            onClick={(e) => {
-              e.stopPropagation();
-              goToNext();
-            }}
-            className="absolute right-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-curandera-dark/70 hover:bg-curandera-dark transition-colors text-white z-10"
-            aria-label="Następne zdjęcie"
-          >
-            <ChevronRight size={28} />
-          </button>
-        </div>
-
-        {/* Thumbnails - transparent background */}
-        <div className="p-4 flex gap-3 justify-center">
-          {certificates.map((cert, index) => (
-            <button
-              key={cert.id}
-              onClick={() => goToIndex(index)}
-              className={`relative rounded overflow-hidden transition-all duration-200 ${
-                currentIndex === index
-                  ? 'ring-2 ring-curandera-accent scale-105'
-                  : 'opacity-60 hover:opacity-100 hover:scale-105'
-              }`}
-              style={{ width: '80px', height: '80px' }}
-            >
-              <img
-                src={asset(cert.path)}
-                alt={`Miniatura: ${cert.name}`}
-                className="w-full h-full object-cover"
-              />
-            </button>
-          ))}
-        </div>
+        ))}
       </div>
 
       <style>{`
