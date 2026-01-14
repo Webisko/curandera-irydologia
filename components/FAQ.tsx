@@ -85,7 +85,7 @@ export const FAQ: React.FC = () => {
     <Section id="faq" bg="default">
       <div className="max-w-4xl mx-auto">
         {/* Title styled like the reference: large, serif, accent */}
-        <h2 className="font-serif text-curandera-primary text-h-l text-center mb-12 lowercase">Pytania i odpowiedzi</h2>
+        <h2 className="font-serif text-curandera-primary text-h-l text-center mb-10 lowercase">Pytania i odpowiedzi</h2>
 
         {/* Minimal list style: accent-colored questions, plus/minus icons, no separators */}
         <div className="space-y-2">

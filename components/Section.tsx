@@ -4,14 +4,13 @@ interface SectionProps {
   id?: string;
   className?: string;
   children: React.ReactNode;
-  bg?: 'default' | 'white' | 'soft' | 'alt';
+  bg?: 'default' | 'white' | 'alt';
 }
 
 export const Section: React.FC<SectionProps> = ({ id, className = '', children, bg = 'default' }) => {
   const bgColors = {
     default: 'bg-curandera-bg',
     white: 'bg-white',
-    soft: 'bg-curandera-soft',
     alt: 'bg-curandera-alt'
   };
 

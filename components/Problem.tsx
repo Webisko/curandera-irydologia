@@ -1,6 +1,5 @@
 import React from 'react';
 import { Section } from './Section';
-import { Check, X } from 'lucide-react';
 
 export const Problem: React.FC = () => {
   const problems = [
@@ -10,78 +9,26 @@ export const Problem: React.FC = () => {
     "Potrzebujesz szybkiej diagnozy bez ingerencji w tkanki ciała?"
   ];
 
-  const forYou = [
-    "chcesz zrozumieć przyczyny swoich dolegliwości, nie tylko objawy",
-    "interesuje Cię profilaktyka i holistyczne podejście do zdrowia",
-    "jesteś na etapie szukania kierunku w drodze do zdrowia",
-    "chcesz zrozumieć, jak działa Twoje ciało i do jakich schorzeń ma predyspozycje"
-  ];
-
-  const notForYou = [
-    "szukasz jednoznacznej diagnozy medycznej",
-    "oczekujesz \"gotowego rozwiązania\" dla swoich problemów zdrowotnych",
-    "nie jesteś gotowa/-y na zmianę diety, stylu życia, nawyków"
-  ];
-
   return (
     <Section id="problem" bg="default">
       <div className="max-w-5xl mx-auto">
         {/* Intro Questions */}
-        <div className="mb-12 text-center">
-          <h2 className="font-serif text-h-l text-curandera-primary mb-12">Kiedy irydologia online może Ci pomóc?</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
+        <div className="mb-8 text-center">
+          <h2 className="font-serif text-h-l text-curandera-primary mb-10">Kiedy irydologia online może Ci pomóc?</h2>
+          <p className="text-body-l text-curandera-body mb-8 max-w-3xl mx-auto">
+            Analiza irydologiczna pomaga zrozumieć predyspozycje organizmu, zanim pojawią się poważne sygnały.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-8 text-left">
             {problems.map((prob, idx) => (
               <div
                 key={idx}
-                className="flex items-center bg-curandera-bg p-4 rounded-none"
+                className="flex items-center bg-white p-4 rounded-none shadow-md hover:shadow-lg hover:scale-[1.02] transition-all duration-300"
               >
-                <span className="text-curandera-accent text-h-l mr-3 font-serif">?</span>
+                <span className="text-curandera-accent text-h-l ml-6 mr-5 font-serif flex-shrink-0">?</span>
                 <p className="font-sans text-body-l text-curandera-dark/80 leading-snug">{prob}</p>
               </div>
             ))}
           </div>
-          <p className="mt-12 text-h-m font-serif text-curandera-secondary">
-            Analiza irydologiczna pomaga zrozumieć predyspozycje organizmu, zanim pojawią się poważne sygnały.
-          </p>
-        </div>
-
-        {/* Comparison Table */}
-        <div className="grid md:grid-cols-2 gap-8 md:gap-16">
-          <div className="bg-[#F6F8F5] p-8 rounded-none border border-curandera-green/20">
-            <h3 className="font-serif text-h-m text-curandera-green mb-6 flex items-center">
-              <span className="bg-curandera-green text-white rounded-full p-1 mr-3">
-                <Check size={16} />
-              </span>
-              Irydologia online jest dla Ciebie, jeśli:
-            </h3>
-            <ul className="space-y-4">
-              {forYou.map((item, idx) => (
-                <li key={idx} className="flex items-start text-stone-700">
-                  <Check size={18} className="text-curandera-green mr-3 mt-2 flex-shrink-0" />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Not For You */}
-          <div className="bg-[#FFF5F5] p-8 rounded-none border border-red-100">
-            <h3 className="font-serif text-h-m text-red-800/70 mb-6 flex items-center">
-              <span className="bg-red-800/70 text-white rounded-full p-1 mr-3">
-                <X size={16} />
-              </span>
-              Irydologia nie jest dla Ciebie, jeśli:
-            </h3>
-            <ul className="space-y-4">
-              {notForYou.map((item, idx) => (
-                <li key={idx} className="flex items-start text-stone-700">
-                  <X size={18} className="text-red-800/50 mr-3 mt-2 flex-shrink-0" />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
         </div>
       </div>
     </Section>

@@ -10,7 +10,7 @@ export const Hero: React.FC = () => {
         <img 
           src={asset('images/hero_3.webp')} 
           alt="Zbliżenie na tęczówkę oka" 
-          className="w-full h-full object-cover object-center md:object-left"
+          className="w-full h-full object-cover object-center"
         />
         {/* Dark overlay gradient from left */}
         <div className="absolute inset-0 bg-gradient-to-r from-curandera-dark/80 via-curandera-dark/60 to-transparent"></div>

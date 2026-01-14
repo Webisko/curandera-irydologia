@@ -2,6 +2,7 @@ import React from 'react';
 import { Navigation } from './components/Navigation';
 import { Hero } from './components/Hero';
 import { Problem } from './components/Problem';
+import { ForWhom } from './components/ForWhom';
 import { Pricing } from './components/Pricing';
 import { FAQ } from './components/FAQ';
 import { About } from './components/About';
@@ -18,6 +19,7 @@ function App() {
       <main>
         <Hero />
         <Problem />
+        <ForWhom />
         <Process />
         <About />
         <FAQ />

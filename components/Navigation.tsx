@@ -26,7 +26,7 @@ export const Navigation: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         {/* Logo */}
         <a href="#" className="flex-shrink-0">
-          <img src={asset(isScrolled ? 'images/Curandera_logo_balanced_dark.webp' : 'images/Curandera_logo_balanced_light.webp')} alt="CURANDERA" className="w-[320px] max-w-[75vw] h-auto" />
+          <img src={asset(isScrolled ? 'images/Curandera_logo_balanced_dark.webp' : 'images/Curandera_logo_balanced_light.webp')} alt="CURANDERA" className="w-[240px] max-w-[50vw] md:max-w-[75vw] h-auto max-h-[60px]" />
         </a>
 
         {/* Desktop Menu */}
@@ -53,25 +53,31 @@ export const Navigation: React.FC = () => {
         <button className={`lg:hidden transition-colors ${
           isScrolled ? 'text-curandera-dark' : 'text-white'
         }`} onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
-          {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+          <div className="relative w-7 h-7">
+            <Menu size={28} className={`absolute inset-0 transition-all duration-300 ${mobileMenuOpen ? 'opacity-0 rotate-90' : 'opacity-100 rotate-0'}`} />
+            <X size={28} className={`absolute inset-0 transition-all duration-300 ${mobileMenuOpen ? 'opacity-100 rotate-0' : 'opacity-0 -rotate-90'}`} />
+          </div>
         </button>
       </div>
 
       {/* Mobile Menu */}
-      {mobileMenuOpen && (
-        <div className="absolute top-full left-0 w-full bg-curandera-bg shadow-lg lg:hidden flex flex-col items-center py-8 space-y-6">
-           {navLinks.map((link) => (
-            <a 
-              key={link.name} 
-              href={link.href} 
-              className="text-curandera-dark text-body-l lowercase tracking-widest font-serif"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              {link.name}
-            </a>
-          ))}
-        </div>
-      )}
+      <div className={`absolute top-full left-0 w-full bg-curandera-bg shadow-lg lg:hidden flex flex-col items-center py-8 space-y-6 transition-all duration-800 overflow-hidden z-40 ${
+        mobileMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full pointer-events-none'
+      }`}>
+         {navLinks.map((link) => (
+          <a 
+            key={link.name} 
+            href={link.href} 
+            className="text-curandera-dark text-body-l lowercase tracking-widest font-serif"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            {link.name}
+          </a>
+        ))}
+        <a href="#oferta" className="px-5 py-2 rounded-none text-body-l lowercase tracking-widest transition-all bg-curandera-dark text-white hover:bg-curandera-accent" onClick={() => setMobileMenuOpen(false)}>
+          Wybierz Pakiet
+        </a>
+      </div>
     </nav>
   );
 };

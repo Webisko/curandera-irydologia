@@ -43,12 +43,9 @@ Wszystkie elementy na stronie używają czcionki **Forum** (serif).
 ---
 
 ### Nagłówek M (`text-h-m`)
-- **Rozmiar**: `clamp(18px, 1.2rem + 0.5vw, 24px)`
   - Minimalny: 18px
   - Maksymalny: 24px
   - Responsywny: skaluje się płynnie między tymi wartościami
-- **Grubość**: `font-normal` (400)
-- **Użycie**: Pytania w FAQ, mniejsze nagłówki (H3)
 
 **Przykład użycia:**
 ```tsx
@@ -57,13 +54,12 @@ Wszystkie elementy na stronie używają czcionki **Forum** (serif).
 </h3>
 ```
 
----
 
 ## Tekst
 
 ### Tekst L (`text-body-l`)
-- **Rozmiar**: `clamp(16px, 1rem + 0.5vw, 20px)`
-  - Minimalny: 16px
+- **Rozmiar**: `clamp(18px, 1rem + 0.5vw, 20px)`
+  - Minimalny: 18px
   - Maksymalny: 20px
   - Responsywny: skaluje się płynnie między tymi wartościami
 - **Grubość**: `font-normal` (400)
@@ -72,7 +68,6 @@ Wszystkie elementy na stronie używają czcionki **Forum** (serif).
 
 **Przykład użycia:**
 ```tsx
-<p className="font-sans text-body-l text-curandera-body leading-relaxed">
   Moja droga do zdrowia zawsze wiodła przez naturę...
 </p>
 ```
@@ -80,12 +75,10 @@ Wszystkie elementy na stronie używają czcionki **Forum** (serif).
 ---
 
 ### Tekst M (`text-body-m`)
-- **Rozmiar**: `clamp(14px, 0.8rem + 0.2vw, 16px)`
+ **Rozmiar**: `clamp(16px, 0.8rem + 0.2vw, 18px)`
   - Minimalny: 14px
   - Maksymalny: 16px
   - Responsywny: skaluje się płynnie między tymi wartościami
-- **Grubość**: `font-medium` (500)
-- **Użycie**: Małe etykiety, metadane, kategorii sekcji (uppercase z tracking-widest)
 
 **Przykład użycia:**
 ```tsx
@@ -94,7 +87,6 @@ Wszystkie elementy na stronie używają czcionki **Forum** (serif).
 </span>
 ```
 
----
 
 ## Domyślny rozmiar body
 Na elemencie `<body>` ustawiony jest domyślny rozmiar czcionki: **text-body-l** (clamp(16px, 1rem + 0.5vw, 20px), font-normal).

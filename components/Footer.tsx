@@ -7,13 +7,13 @@ export const Footer: React.FC = () => {
       <div className="max-w-4xl mx-auto px-6">
         {/* Disclaimer Box */}
         <div className="border border-curandera-accent/30 bg-curandera-bg p-6 rounded-none text-center mb-12 shadow-sm">
-          <p className="text-body-m text-stone-600 font-sans leading-relaxed">
+          <p className="text-body-m text-curandera-body font-sans leading-relaxed">
             <strong className="text-curandera-primary block mb-2 uppercase tracking-wider text-h-m">Klauzula informacyjna</strong>
             Analiza irydologiczna nie zastępuje diagnostyki medycznej czy wizyty u lekarza, a wyniki uzyskane podczas analizy irydologicznej należy traktować jako wstępne – warto je potwierdzić metodami konwencjonalnymi.
           </p>
         </div>
 
-        <div className="w-full max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between text-stone-500 text-body-m font-sans">
+        <div className="w-full max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between text-curandera-body text-body-m font-sans">
           {/* Left: Logo */}
           <div className="flex items-center justify-center md:justify-start w-full md:w-auto mb-4 md:mb-0">
             <img src={asset('images/Curandera_logo_balanced_dark.webp')} alt="CURANDERA" className="h-8 w-auto" />

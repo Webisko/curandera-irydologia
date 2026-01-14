@@ -27,9 +27,9 @@ export const Process: React.FC = () => {
   ];
 
   return (
-    <Section id="proces" bg="alt" className="text-curandera-body">
-      <div className="text-center mb-10">
-        <h2 className="font-serif text-h-l text-curandera-primary mb-2">Jak wygląda proces?</h2>
+    <Section id="proces" bg="default" className="text-curandera-body">
+      <div className="text-center mb-8">
+        <h2 className="font-serif text-h-l text-curandera-primary mb-10">Jak wygląda proces?</h2>
         {/* Usunięto zbędny podtytuł */}
       </div>
 

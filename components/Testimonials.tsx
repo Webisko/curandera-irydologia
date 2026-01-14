@@ -55,7 +55,7 @@ export const Testimonials: React.FC = () => {
 
   return (
     <Section id="opinie" bg="alt">
-      <div className="text-center mb-12">
+      <div className="text-center mb-8">
         <h2 className="font-serif text-h-l text-curandera-primary lowercase">Opinie klientów</h2>
       </div>
 

@@ -7,7 +7,7 @@ import { Package } from '../types';
 const packages: Package[] = [
   {
     id: 'basic',
-    title: 'PAKIET I',
+    title: 'pakiet I',
     price: '199 zł',
     shortDescription: 'Podstawowa, kompleksowa analiza tęczówki oka, pozwalająca lepiej zrozumieć kondycję organizmu oraz jego indywidualne predyspozycje.',
     features: [
@@ -24,7 +24,7 @@ const packages: Package[] = [
   },
   {
     id: 'extended',
-    title: 'PAKIET II',
+    title: 'pakiet II',
     price: '299 zł',
     shortDescription: 'Rozszerzona analiza irydologiczna z indywidualnymi zaleceniami i naturalną suplementacją dopasowaną do Twoich potrzeb.',
     features: [
@@ -50,9 +50,9 @@ export const Pricing: React.FC = () => {
 
   return (
     <Section id="oferta" bg="default">
-      <div className="text-center mb-16">
-        <h2 className="font-serif text-h-l text-curandera-primary mb-4 lowercase">Oferta</h2>
-        <p className="mt-4 text-curandera-dark/70 uppercase tracking-widest text-body-m">Wybierz drogę do zdrowia</p>
+      <div className="text-center mb-8">
+        <h2 className="font-serif text-h-l text-curandera-primary mb-10 lowercase">Oferta</h2>
+        <p className="text-curandera-dark/70 text-body-l lowercase font-sans">wybierz drogę do zdrowia</p>
       </div>
 
       <div className="grid md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto items-start">
@@ -71,7 +71,7 @@ export const Pricing: React.FC = () => {
             )}
 
             <div className="mb-6 text-center">
-              <h3 className="font-serif text-h-m mb-2">{pkg.title}</h3>
+              <h3 className="font-serif text-h-m mb-2 text-curandera-secondary">{pkg.title}</h3>
               <div className="text-h-l font-serif text-curandera-accent my-4">{pkg.price}</div>
               <p className="text-body-l text-curandera-dark/70 font-sans leading-relaxed min-h-[80px]">
                 {pkg.shortDescription}
@@ -82,9 +82,9 @@ export const Pricing: React.FC = () => {
               {pkg.features.map((feature, idx) => (
                 <li key={idx} className="flex items-start text-body-m text-curandera-dark/80">
                   <span
-                    className="flex items-center justify-center w-[20px] h-[20px] border-2 border-[#C75A00] bg-white rounded-none mr-3 mt-0.5 flex-shrink-0"
+                    className="flex items-center justify-center w-[20px] h-[20px] border-2 border-curandera-primary bg-white rounded-none mr-3 mt-0.5 flex-shrink-0"
                   >
-                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#C75A00" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#BE5705" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
                       <polyline points="20 6 9 17 4 12" />
                     </svg>
                   </span>
@@ -121,7 +121,7 @@ export const Pricing: React.FC = () => {
                   `}
                 >
                   {expandedId === pkg.id && (
-                    <p className="text-body-m text-stone-600 font-sans leading-relaxed whitespace-pre-line bg-curandera-soft/50 p-4 rounded-none">
+                    <p className="text-body-m text-curandera-body font-sans leading-relaxed whitespace-pre-line bg-curandera-alt p-4 rounded-none">
                       {pkg.detailsContent}
                     </p>
                   )}
