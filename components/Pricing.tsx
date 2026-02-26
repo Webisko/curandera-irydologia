@@ -26,7 +26,7 @@ const packages: Package[] = [
     id: 'extended',
     title: 'pakiet II',
     price: '299 zł',
-    shortDescription: 'Kompleksowa analiza irydologiczna z indywidualnymi zaleceniami i naturalną suplementacją dopasowaną do Twoich potrzeb.',
+    shortDescription: 'Kompleksowa analiza irydologiczna z indywidualnymi zaleceniami i planem suplementacji dopasowanym do Twoich potrzeb.',
     features: [
       'Pełna analiza irydologiczna online jak w Pakiecie I',
       'Indywidualny plan naturalnej suplementacji (PDF)',
