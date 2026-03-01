@@ -13,7 +13,6 @@ const packages: Package[] = [
     features: [
       'Profesjonalna analiza irydologiczna online na podstawie przesłanego zdjęcia',
       'Ocena możliwych słabości narządów i układów ciała',
-      'Omówienie w formie nagrania wideo (20-30 min)',
       'Plik tekstowy PDF z podsumowaniem analizy',
       '1 konsultacja mailowa w przypadku dodatkowych pytań'
     ],
