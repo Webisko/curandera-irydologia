@@ -23,6 +23,20 @@ const testimonials: Testimonial[] = [
     name: "Ewelina Szwejda",
     rating: 5,
     text: `Badanie irydologiczne zaproponowane przez Olgę było dla mnie czymś zupełnie nowym. Nigdy wcześniej nie przyszło mi do głowy, że poprzez oczy można zobaczyć, jak funkcjonuje cały organizm. Już samo to było dla mnie bardzo ciekawe i otwierające. Podczas badania zrobiłyśmy zdjęcie oka, a następnie wspólnie je obserwowałyśmy. Olga niezwykle dokładnie i jasno wszystko mi wytłumaczyła – każdą zmianę, każdy znak w oku, pokazując, z czym w organizmie jest on powiązany. Jej sposób tłumaczenia był bardzo zrozumiały, spokojny i pełen uważności. To doświadczenie zainspirowało mnie do głębszego wglądu w swoje ciało oraz do większej troski o jego oczyszczanie i regenerację. Samo badanie ma prostą formę – wykonanie zdjęcia – jednak to, co dzieje się później, jest bardzo wartościowe. Olga przygotowała dla mnie szczegółowy opis, a także poleciła zioła, które mogę pić, aby wspierać oczyszczanie organizmu. Dodatkowo książka, którą pożyczyła mi do przeczytania, pokazała mi, jak mogę dalej o siebie dbać po takim badaniu i jak świadomie kontynuować ten proces. Z pełnym przekonaniem mogę powiedzieć, że było to dla mnie cenne doświadczenie, które dało mi nowe spojrzenie na moje ciało i zdrowie. Dziękuję ❤️🍀`
+  },
+  {
+    name: "Agata Korecka",
+    rating: 5,
+    text: `Olga, bardzo dziękuję Ci za analizę irydologiczną.
+Przesłuchałam Twoje nagranie oraz dokładnie przeczytałam wszystkie przesłane pliki PDF – jestem pod ogromnym wrażeniem ilości pracy, wiedzy i szczegółowości, jakie w to włożyłaś.
+Opracowanie jest niezwykle dokładne, rzetelne i bardzo szczegółowe. PDF-y zawierają ogrom informacji, jasne wyjaśnienia oraz konkretne zalecenia, które można realnie wdrożyć w życie. Wszystko zostało przedstawione w sposób uporządkowany i z dużą uważnością.
+To, co opisałaś i omówiłaś, w pełni odnajduję u siebie – wiele rzeczy było zaskakująco trafnych i spójnych z moimi obserwacjami organizmu.
+Jestem bardzo zadowolona i z czystym sumieniem polecam Twoją pracę ❤️`
+  },
+  {
+    name: "Jolanta Szot",
+    rating: 5,
+    text: `Cześć, czuję wdzięczność i cieszę się, że zdecydowałam się na analizę u Ciebie, bo pomogła mi połączyć różne "kropki". Jestem na etapie stopniowego wdrażania zmian. Właściwie za mną prawie tydzień, w którym pewne rzeczy wyeliminowałam sprawnie, inne małymi krokami. Równocześnie wprowadzam nowe. Najpierw czułam się trochę przejęta i w lekkim chaosie, ale z chwilowego przytłoczenia szybko przeszłam do działania i zaczęłam się organizować. Teraz czuję zafascynowanie na myśl o tych zmianach i o nowym. Ta analiza jest dla mnie bardzo pomocna i wspierająca. Totalnie trafiłaś w to, co u mnie i jak ze mną. Dziękuję! ❤️`
   }
 ];
 
